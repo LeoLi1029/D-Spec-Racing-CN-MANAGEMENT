@@ -375,6 +375,88 @@
                 grid-template-columns: 1fr;
             }
         }
+
+/* 适配 iPhone 14 Pro 等窄屏手机的样式 */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.85rem;
+    }
+    header {
+        padding: 0.6rem 0;
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    .header-actions {
+        margin-top: 8px;
+    }
+    .sidebar {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .nav-menu {
+        display: flex;
+        overflow-x: auto;
+    }
+    .nav-link {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin-right: 10px;
+    }
+    .user-info h3 {
+        font-size: 0.9rem;
+    }
+    .user-info p {
+        font-size: 0.7rem;
+    }
+    .main-content {
+        padding: 10px;
+    }
+    .dashboard-title h1 {
+        font-size: 1.4rem;
+    }
+    .dashboard-title p {
+        font-size: 0.8rem;
+    }
+    .card-header h2 {
+        font-size: 1rem;
+    }
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    .stat-info h3 {
+        font-size: 1.4rem;
+    }
+    .stat-info p {
+        font-size: 0.75rem;
+    }
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+    img {
+        border-radius: 4px;
+    }
+    canvas#driverRadar {
+        width: 250px !important;
+        height: 250px !important;
+    }
+}
     </style>
 </head>
 <body>
@@ -576,19 +658,19 @@
                                         <tbody>
                                             <tr>
                                                 <td>DS001</td>
-                                                <td>DSpec Full CarbonEurofighter</td>
+                                                <td>DSpec Eurofighter（全碳纤维）</td>
                                                 <td><span class="badge badge-success">可用</span></td>
                                                 <td>2025-09-15</td>
                                             </tr>
                                             <tr>
                                                 <td>DS002</td>
-                                                <td>Nissan 6.2LNOS      R34</td>
+                                                <td>Nissan S15（漂移改装）</td>
                                                 <td><span class="badge badge-warning">维护中</span></td>
                                                 <td>2025-08-30</td>
                                             </tr>
                                             <tr>
                                                 <td>DS003</td>
-                                                <td>Lamboghini 10.4L Hurracan</td>
+                                                <td>Toyota GR86</td>
                                                 <td><span class="badge badge-danger">维修中</span></td>
                                                 <td>2025-09-05</td>
                                             </tr>
@@ -636,9 +718,10 @@
                                     </tr>
                                 </thead>
                                 <tbody id="vehiclesTableBody">
+                                    <!-- 车辆列表包含所有参赛车辆，可编辑和扩展 -->
                                     <tr>
                                         <td contenteditable="true">DS001</td>
-                                        <td contenteditable="true">DSpec full carbon Eurofighter</td>
+                                        <td contenteditable="true">DSpec Eurofighter（全碳纤维）</td>
                                         <td><span class="badge badge-success">可用</span></td>
                                         <td contenteditable="true">8</td>
                                         <td contenteditable="true">2025-09-15</td>
@@ -649,7 +732,7 @@
                                     </tr>
                                     <tr>
                                         <td contenteditable="true">DS002</td>
-                                        <td contenteditable="true">Nissan 6.2 NOS R34</td>
+                                        <td contenteditable="true">Nissan S15（漂移改装）</td>
                                         <td><span class="badge badge-warning">维护中</span></td>
                                         <td contenteditable="true">12</td>
                                         <td contenteditable="true">2025-08-30</td>
@@ -660,10 +743,54 @@
                                     </tr>
                                     <tr>
                                         <td contenteditable="true">DS003</td>
-                                        <td contenteditable="true">Lamboghini 10.4L hurracan</td>
+                                        <td contenteditable="true">Toyota GR86</td>
                                         <td><span class="badge badge-danger">维修中</span></td>
                                         <td contenteditable="true">5</td>
                                         <td contenteditable="true">2025-09-05</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
+                                            <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">DS004</td>
+                                        <td contenteditable="true">Lamborghini Huracán（10.4L）</td>
+                                        <td><span class="badge badge-success">可用</span></td>
+                                        <td contenteditable="true">0</td>
+                                        <td contenteditable="true">2025-10-10</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
+                                            <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">DS005</td>
+                                        <td contenteditable="true">Nissan R34（6.2L NOS）</td>
+                                        <td><span class="badge badge-success">可用</span></td>
+                                        <td contenteditable="true">0</td>
+                                        <td contenteditable="true">2025-11-20</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
+                                            <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">DS006</td>
+                                        <td contenteditable="true">Nissan R35（改装）</td>
+                                        <td><span class="badge badge-success">可用</span></td>
+                                        <td contenteditable="true">0</td>
+                                        <td contenteditable="true">2025-12-05</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
+                                            <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">DS007</td>
+                                        <td contenteditable="true">BMW Z4 Drift Spec</td>
+                                        <td><span class="badge badge-success">可用</span></td>
+                                        <td contenteditable="true">0</td>
+                                        <td contenteditable="true">2025-12-20</td>
                                         <td>
                                             <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
                                             <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
@@ -789,14 +916,14 @@
                                 <img src="massimo-p-qca6OGElmkk-unsplash.jpg" alt="Drift car" style="width:100%; height:auto; border-radius:8px; margin-bottom:15px;">
                                 <h3>基本信息</h3>
                                 <p>姓名：Michael&nbsp;Tang</p>
-                                <p>生日：1981年2月5日 </p>
-                                <p>国籍：中国</p>
+                                <p>生日：1981年2月5日</p>
+                                <p>国籍：新西兰</p>
                                 <p>赛车：BMW&nbsp;Z4&nbsp;Drift&nbsp;Spec、Lamborghini&nbsp;Huracán、Nissan&nbsp;R34、Nissan&nbsp;R35</p>
                                 <p>擅长：高速漂移、大角度甩尾</p>
-                                <p>简介：Michael&nbsp;Tang是DSpec&nbsp;Racing车队经验丰富的漂移车手，擅长激进的漂移追走角度和线路，曾多次在新西兰漂移赛事中获得好成绩。</p>
+                                <p>简介：Michael&nbsp;Tang是DSpec&nbsp;Racing车队经验丰富的漂移车手，擅长在高速条件下保持精准的漂移角度和线路，曾多次在新西兰及中国的漂移赛事中获得好成绩。</p>
                                 <p>线上视频链接：
-                                    <a href="https://www.youtube.com/watch?v=soO_PkPWcp0">YouTube&nbsp;视频</a> |
-                                    <a href="https://www.instagram.com/michaeltangnz/">Instagram&nbsp;频道</a>
+                                    <a href="https://youtu.be/GJslmC1o9Ok" target="_blank">YouTube&nbsp;视频</a> |
+                                    <a href="https://www.instagram.com/oversteertv/" target="_blank">Instagram&nbsp;频道</a>
                                 </p>
                             </div>
                             <div class="col-6" style="display:flex; justify-content:center; align-items:center;">
@@ -920,7 +1047,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p style="margin-top:10px;">供应商绩效评估可采用七大指标体系，包括质量、成本、交货、服务、技术、资产和员工与流程等方面【611348214694634†L31-L40】。</p>
+                        <p style="margin-top:10px;">供应商绩效评估可采用七大指标体系，包括质量、成本、交货、服务、技术、资产和员工与流程等方面。</p>
                     </div>
                 </div>
                 <div class="card">
@@ -1014,7 +1141,7 @@
                 <div class="card">
                     <div class="card-header"><h2>客户旅程管理</h2></div>
                     <div class="card-body">
-                        <p>采用客户旅程管理（CJM）方法，以客户为中心对品牌触点进行系统化识别、跟踪、分析和优化，提升满意度和转化率【143751417492133†L62-L68】。关键步骤包括绘制旅程地图（梳理行为路径和情绪曲线等）、整合多渠道数据以获得统一客户视图、设置个性化触发规则、在多个渠道上保持一致执行，并通过A/B测试持续优化【143751417492133†L72-L99】。</p>
+                        <p>采用客户旅程管理（CJM）方法，以客户为中心对品牌触点进行系统化识别、跟踪、分析和优化，提升满意度和转化率。关键步骤包括绘制旅程地图（梳理行为路径和情绪曲线等）、整合多渠道数据以获得统一客户视图、设置个性化触发规则、在多个渠道上保持一致执行，并通过A/B测试持续优化。</p>
                     </div>
                 </div>
                 <div class="card">
@@ -1027,6 +1154,52 @@
                     <div class="card-header"><h2>客户类型定位策略</h2></div>
                     <div class="card-body">
                         <p>通过需求分析和客户细分，根据客户行为、偏好和价值识别不同类型客户，建立匹配模型，为赞助商和合作伙伴提供更精准的服务和营销策略。</p>
+                    </div>
+                </div>
+
+                <!-- CRM系统与客户关系管理 -->
+                <div class="card">
+                    <div class="card-header"><h2>CRM系统与客户关系管理</h2></div>
+                    <div class="card-body">
+                        <p>客户关系管理系统（CRM）是企业通过信息技术和流程设计来整合、收集、分析顾客信息，以更好地了解并区分顾客，从而提供适合其需求的产品或服务并管理企业与顾客的关系。其目标在于提高顾客满意度、忠诚度和维系率，同时有效选择和吸引高价值的新顾客。</p>
+                        <p>根据应用功能，CRM可分为三大类型：操作型、分析型和协同型。操作型CRM聚焦销售、营销和客服自动化，整合前后台业务流程；分析型CRM利用数据仓库、数据挖掘等技术分析顾客行为，为决策提供依据；协同型CRM则通过整合电话、网页、电子邮件等沟通渠道促进企业与客户之间的互动。此外，可按客户类别划分为B2C和B2B，并区分传统型与在线型CRM，以适应不同企业的业务架构和平台化需求。</p>
+                        <p>对于赛车队而言，CRM系统不仅用于记录赞助商、合作伙伴和粉丝的联系信息，还可建立积分和会员体系，跟踪潜在客户的兴趣点，利用自动化营销工具开展定向推送，并与财务系统集成以实现合同、票务和支付的闭环管理。</p>
+                    </div>
+                </div>
+
+                <!-- 数据分析与报告 -->
+                <div class="card">
+                    <div class="card-header"><h2>数据分析与报告</h2></div>
+                    <div class="card-body">
+                        <p>运营系统应内置数据分析和报表功能，结合赛事成绩、车辆状态、预算执行和客户互动等数据维度，构建可视化仪表盘。通过定期生成报表，可以评估车队运营效率、粉丝增长趋势、赞助曝光率和投资回报率，为决策提供依据。</p>
+                        <p>分析型CRM和BI工具可帮助识别影响客户体验的关键指标，及时发现异常趋势并通过预警系统提示管理者。例如通过热度分析确定最受欢迎的赛事或车手，通过模型预测赛事成本与收益，并与预算追踪模块联动及时调整资源分配。</p>
+                    </div>
+                </div>
+
+                <!-- 品牌与赞助管理 -->
+                <div class="card">
+                    <div class="card-header"><h2>品牌与赞助管理</h2></div>
+                    <div class="card-body">
+                        <p>统一管理品牌形象、赞助合同和市场推广活动，是运营系统的重要组成部分。通过创建赞助商数据库，可跟踪各赞助合同的权益内容、曝光周期及回报指标，确保合作伙伴获得预期的品牌价值。</p>
+                        <p>系统还应支持设计营销活动计划，如线上直播、粉丝互动、产品发布和媒体宣传，并与预算模块关联预算和ROI计算，帮助评估营销活动成效。</p>
+                    </div>
+                </div>
+
+                <!-- 社区与粉丝互动 -->
+                <div class="card">
+                    <div class="card-header"><h2>社区与粉丝互动</h2></div>
+                    <div class="card-body">
+                        <p>通过社交媒体、会员俱乐部和线下活动维系粉丝群体。运营系统可以集成官方微信公众号、微博、Instagram 和 YouTube 等渠道的数据，管理粉丝反馈并进行舆情分析。</p>
+                        <p>车队可设置会员等级和积分奖励机制，提供周边产品优先购买权、赛事VIP体验等福利，增强粉丝黏性。同时建立社区论坛与问答平台，让粉丝分享技巧和心得，形成良好的品牌社区。</p>
+                    </div>
+                </div>
+
+                <!-- 安全与合规 -->
+                <div class="card">
+                    <div class="card-header"><h2>安全与合规</h2></div>
+                    <div class="card-body">
+                        <p>赛车运营涉及高度的风险和严格的法规要求。运营系统需包含安全管理和合规检查模块，记录车辆和赛道安全检测结果，跟踪驾驶员培训及医疗体检情况，确保符合赛事规则。</p>
+                        <p>此外，应按照国家和国际汽车联合会（FIA）的规定，管理数据隐私和安全策略，更新保险和法务信息，与法务与保险模块协同工作，维护合同风险和事故应急预案。</p>
                     </div>
                 </div>
             </div>
@@ -1166,7 +1339,7 @@
                         <h2>项目成本分析和ROI评估</h2>
                     </div>
                     <div class="card-body">
-                        <p>通过汇总项目收益与成本，对各项活动进行成本分析和投资回报率（ROI）评估。ROI表示投资收益与成本之间的百分比，其计算公式为（投资现值－投资成本）/投资成本×100%【487517483389791†L176-L181】。该指标有助于衡量赛事和推广活动的经济效益，为资源分配决策提供依据。</p>
+                        <p>通过汇总项目收益与成本，对各项活动进行成本分析和投资回报率（ROI）评估。ROI表示投资收益与成本之间的百分比，其计算公式为（投资现值－投资成本）/投资成本×100%。该指标有助于衡量赛事和推广活动的经济效益，为资源分配决策提供依据。</p>
                     </div>
                 </div>
             </div>
