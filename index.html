@@ -530,6 +530,26 @@
                         <i class="fas fa-chart-line"></i> 预算追踪
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-target="analytics">
+                        <i class="fas fa-chart-bar"></i> 数据分析
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-target="news">
+                        <i class="fas fa-newspaper"></i> 新闻资讯
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-target="shop">
+                        <i class="fas fa-shopping-cart"></i> 商店
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-target="forum">
+                        <i class="fas fa-comments"></i> 论坛
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- 主内容区 -->
@@ -916,7 +936,7 @@
                                 <img src="massimo-p-qca6OGElmkk-unsplash.jpg" alt="Drift car" style="width:100%; height:auto; border-radius:8px; margin-bottom:15px;">
                                 <h3>基本信息</h3>
                                 <p>姓名：Michael&nbsp;Tang</p>
-                                <p>生日：1981年2月5日</p>
+                                <p>生日：1981年2月5日（44岁）</p>
                                 <p>国籍：新西兰</p>
                                 <p>赛车：BMW&nbsp;Z4&nbsp;Drift&nbsp;Spec、Lamborghini&nbsp;Huracán、Nissan&nbsp;R34、Nissan&nbsp;R35</p>
                                 <p>擅长：高速漂移、大角度甩尾</p>
@@ -1343,6 +1363,192 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 数据分析模块 -->
+            <div class="module-section" id="analytics">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h1>数据分析</h1>
+                        <p>车辆使用率、赛事成本和预算分布可视化</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header"><h2>车辆使用次数分布</h2></div>
+                            <div class="card-body" style="text-align:center;">
+                                <canvas id="vehicleUsageChart" width="320" height="240"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header"><h2>赛事成本趋势</h2></div>
+                            <div class="card-body" style="text-align:center;">
+                                <canvas id="eventCostChart" width="320" height="240"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header"><h2>预算分配比例</h2></div>
+                            <div class="card-body" style="text-align:center;">
+                                <canvas id="budgetPieChart" width="320" height="240"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header"><h2>粉丝增长趋势</h2></div>
+                            <div class="card-body" style="text-align:center;">
+                                <canvas id="fanGrowthChart" width="320" height="240"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新闻资讯模块 -->
+            <div class="module-section" id="news">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h1>新闻资讯</h1>
+                        <p>行业动态、赛事报道和技术文章</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h2>最新新闻</h2></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>标题</th>
+                                        <th>发布日期</th>
+                                        <th>来源</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>DSpec Racing签约新赞助商，提高车辆技术能力</td>
+                                        <td>2025-08-10</td>
+                                        <td>官方公告</td>
+                                        <td><button class="btn btn-primary btn-sm">详情</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>分析2025年漂移赛事走势，新规则将带来哪些影响？</td>
+                                        <td>2025-07-28</td>
+                                        <td>赛车社区</td>
+                                        <td><button class="btn btn-primary btn-sm">详情</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>顶级车手分享漂移技巧：如何控制角度与速度</td>
+                                        <td>2025-06-30</td>
+                                        <td>赛车学院</td>
+                                        <td><button class="btn btn-primary btn-sm">详情</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商店模块 -->
+            <div class="module-section" id="shop">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h1>官方商城</h1>
+                        <p>购买周边产品和赛车配件</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header"><h2>限量赛车模型</h2></div>
+                            <div class="card-body">
+                                <p>价格：¥599</p>
+                                <p>库存：20</p>
+                                <button class="btn btn-success btn-sm">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header"><h2>团队纪念T恤</h2></div>
+                            <div class="card-body">
+                                <p>价格：¥199</p>
+                                <p>库存：50</p>
+                                <button class="btn btn-success btn-sm">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header"><h2>碳纤维方向盘</h2></div>
+                            <div class="card-body">
+                                <p>价格：¥2,999</p>
+                                <p>库存：5</p>
+                                <button class="btn btn-success btn-sm">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 论坛模块 -->
+            <div class="module-section" id="forum">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h1>社区论坛</h1>
+                        <p>讨论漂移技巧、车辆改装和赛事心得</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h2>热门主题</h2></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>主题</th>
+                                        <th>发帖人</th>
+                                        <th>回复数</th>
+                                        <th>最后回复时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>讨论如何优化车辆悬挂以提高漂移稳定性</td>
+                                        <td>DriftMaster</td>
+                                        <td>15</td>
+                                        <td>2025-08-19</td>
+                                        <td><button class="btn btn-primary btn-sm">查看</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>你认为今年最有看点的赛事是哪一场？</td>
+                                        <td>SpeedLover</td>
+                                        <td>8</td>
+                                        <td>2025-08-18</td>
+                                        <td><button class="btn btn-primary btn-sm">查看</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>分享你的赛车维修经验和技巧</td>
+                                        <td>GearHead</td>
+                                        <td>22</td>
+                                        <td>2025-08-15</td>
+                                        <td><button class="btn btn-primary btn-sm">查看</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -1405,6 +1611,130 @@
                 }
             });
         }
+
+        // 渲染数据分析页的多个图表
+        function renderAnalyticsCharts() {
+            // 车辆使用次数分布 - 柱状图
+            const usageCtx = document.getElementById('vehicleUsageChart');
+            if (usageCtx) {
+                if (window.vehicleUsageChart) window.vehicleUsageChart.destroy();
+                window.vehicleUsageChart = new Chart(usageCtx.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['DS001','DS002','DS003','DS004','DS005','DS006','DS007'],
+                        datasets: [{
+                            label: '年度使用次数',
+                            data: [8, 12, 5, 3, 4, 2, 1],
+                            backgroundColor: 'rgba(6, 0, 225, 0.6)',
+                            borderColor: 'rgba(6, 0, 225, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: {
+                                ticks: { color: '#666' }
+                            },
+                            y: {
+                                beginAtZero: true,
+                                ticks: { color: '#666' }
+                            }
+                        },
+                        plugins: {
+                            legend: { display: false },
+                            title: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+            // 赛事成本趋势 - 折线图
+            const costCtx = document.getElementById('eventCostChart');
+            if (costCtx) {
+                if (window.eventCostChart) window.eventCostChart.destroy();
+                window.eventCostChart = new Chart(costCtx.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: ['1月','2月','3月','4月','5月','6月','7月','8月'],
+                        datasets: [{
+                            label: '赛事成本 (万元)',
+                            data: [30, 45, 25, 50, 40, 60, 35, 55],
+                            borderColor: 'rgba(225, 6, 0, 1)',
+                            backgroundColor: 'rgba(225, 6, 0, 0.2)',
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: { ticks: { color: '#666' } },
+                            y: { ticks: { color: '#666' } }
+                        },
+                        plugins: {
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+            // 预算分配比例 - 饼图
+            const budgetCtx = document.getElementById('budgetPieChart');
+            if (budgetCtx) {
+                if (window.budgetPieChart) window.budgetPieChart.destroy();
+                window.budgetPieChart = new Chart(budgetCtx.getContext('2d'), {
+                    type: 'pie',
+                    data: {
+                        labels: ['车辆维护','赛事报名','市场推广','人员费用','其他'],
+                        datasets: [{
+                            data: [40, 20, 15, 15, 10],
+                            backgroundColor: [
+                                'rgba(6, 0, 225, 0.8)',
+                                'rgba(225, 6, 0, 0.8)',
+                                'rgba(46, 204, 113, 0.8)',
+                                'rgba(241, 196, 15, 0.8)',
+                                'rgba(155, 89, 182, 0.8)'
+                            ]
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: { color: '#666', boxWidth: 12 }
+                            }
+                        }
+                    }
+                });
+            }
+            // 粉丝增长趋势 - 折线图
+            const fanCtx = document.getElementById('fanGrowthChart');
+            if (fanCtx) {
+                if (window.fanGrowthChart) window.fanGrowthChart.destroy();
+                window.fanGrowthChart = new Chart(fanCtx.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: ['1月','2月','3月','4月','5月','6月','7月','8月'],
+                        datasets: [{
+                            label: '粉丝数量 (万人)',
+                            data: [10, 12, 15, 20, 25, 28, 32, 38],
+                            borderColor: 'rgba(46, 204, 113, 1)',
+                            backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: { ticks: { color: '#666' } },
+                            y: { ticks: { color: '#666' } }
+                        },
+                        plugins: {
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+        }
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-link');
             const moduleSections = document.querySelectorAll('.module-section');
@@ -1419,6 +1749,12 @@
                 if (section) section.classList.add('active');
                 if (targetId === 'drivers') {
                     renderDriverChart();
+                }
+                if (targetId === 'analytics') {
+                    // 稍微延时以确保 canvas 显示后再渲染图表
+                    setTimeout(function() {
+                        renderAnalyticsCharts();
+                    }, 100);
                 }
             }
             // 绑定侧边栏点击事件
