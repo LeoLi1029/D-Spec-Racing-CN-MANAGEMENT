@@ -22,26 +22,22 @@
             --danger: #E74C3C;
             --transition: all 0.3s ease;
         }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: 'Red Hat Display', sans-serif;
             background-color: var(--light-gray);
             color: #333;
             line-height: 1.6;
         }
-        
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
         /* 头部导航 */
         header {
             background: var(--dark);
@@ -52,23 +48,19 @@
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
         .logo {
             display: flex;
             align-items: center;
             gap: 15px;
         }
-        
         .logo img {
             height: 40px;
         }
-        
         .logo-text {
             font-size: 1.5rem;
             font-weight: 900;
@@ -77,13 +69,11 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
         /* 主布局 */
         .main-layout {
             display: flex;
             min-height: calc(100vh - 80px);
         }
-        
         /* 侧边栏 */
         .sidebar {
             width: 250px;
@@ -92,7 +82,6 @@
             padding: 20px 0;
             box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         }
-        
         .user-profile {
             display: flex;
             align-items: center;
@@ -100,7 +89,6 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             margin-bottom: 20px;
         }
-        
         .user-avatar {
             width: 50px;
             height: 50px;
@@ -112,25 +100,20 @@
             font-size: 1.5rem;
             margin-right: 15px;
         }
-        
         .user-info h3 {
             font-size: 1rem;
             margin-bottom: 5px;
         }
-        
         .user-info p {
             font-size: 0.8rem;
             opacity: 0.7;
         }
-        
         .nav-menu {
             list-style: none;
         }
-        
         .nav-item {
             margin-bottom: 5px;
         }
-        
         .nav-link {
             display: flex;
             align-items: center;
@@ -139,42 +122,35 @@
             text-decoration: none;
             transition: var(--transition);
         }
-        
         .nav-link:hover, .nav-link.active {
             background: rgba(255, 255, 255, 0.1);
             border-left: 4px solid var(--accent);
         }
-        
         .nav-link i {
             margin-right: 10px;
             width: 20px;
             text-align: center;
         }
-        
         /* 主内容区 */
         .main-content {
             flex: 1;
             padding: 20px;
             background: var(--light-gray);
         }
-        
         .dashboard-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 30px;
         }
-        
         .dashboard-title h1 {
             font-size: 1.8rem;
             color: var(--dark);
             margin-bottom: 5px;
         }
-        
         .dashboard-title p {
             color: #666;
         }
-        
         /* 卡片样式 */
         .card {
             background: var(--light);
@@ -183,7 +159,6 @@
             margin-bottom: 20px;
             overflow: hidden;
         }
-        
         .card-header {
             padding: 15px 20px;
             border-bottom: 1px solid var(--border-color);
@@ -191,54 +166,44 @@
             justify-content: space-between;
             align-items: center;
         }
-        
         .card-header h2 {
             font-size: 1.2rem;
             color: var(--dark);
         }
-        
         .card-body {
             padding: 20px;
         }
-        
         /* 表格样式 */
         .table-responsive {
             overflow-x: auto;
         }
-        
         table {
             width: 100%;
             border-collapse: collapse;
         }
-        
         th, td {
             padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid var(--border-color);
         }
-        
         th {
             background-color: #f8f9fa;
             font-weight: 600;
             color: #495057;
         }
-        
         tr:hover {
             background-color: #f8f9fa;
         }
-        
         /* 表单样式 */
         .form-group {
             margin-bottom: 20px;
         }
-        
         .form-label {
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
             color: #333;
         }
-        
         .form-control {
             width: 100%;
             padding: 10px 15px;
@@ -247,13 +212,11 @@
             font-size: 1rem;
             transition: var(--transition);
         }
-        
         .form-control:focus {
             outline: none;
             border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(6, 0, 225, 0.1);
         }
-        
         /* 按钮样式 */
         .btn {
             display: inline-block;
@@ -266,34 +229,27 @@
             transition: var(--transition);
             text-decoration: none;
         }
-        
         .btn-primary {
             background: var(--primary);
             color: white;
         }
-        
         .btn-primary:hover {
             background: var(--primary-dark);
         }
-        
         .btn-success {
             background: var(--success);
             color: white;
         }
-        
         .btn-success:hover {
             background: #27ae60;
         }
-        
         .btn-danger {
             background: var(--danger);
             color: white;
         }
-        
         .btn-danger:hover {
             background: #c0392b;
         }
-        
         /* 标签样式 */
         .badge {
             display: inline-block;
@@ -302,62 +258,51 @@
             font-size: 0.8rem;
             font-weight: 500;
         }
-        
         .badge-success {
             background: #eafaf1;
             color: var(--success);
         }
-        
         .badge-warning {
             background: #fef5e7;
             color: var(--warning);
         }
-        
         .badge-danger {
             background: #fdedec;
             color: var(--danger);
         }
-        
         /* 网格系统 */
         .row {
             display: flex;
             flex-wrap: wrap;
             margin: 0 -10px;
         }
-        
         .col {
             flex: 1;
             padding: 0 10px;
         }
-        
         .col-6 {
             flex: 0 0 50%;
             max-width: 50%;
             padding: 0 10px;
         }
-        
         .col-4 {
             flex: 0 0 33.333333%;
             max-width: 33.333333%;
             padding: 0 10px;
         }
-        
         /* 模块特定样式 */
         .module-section {
             display: none;
         }
-        
         .module-section.active {
             display: block;
         }
-        
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
-        
         .stat-card {
             background: white;
             border-radius: 8px;
@@ -366,7 +311,6 @@
             display: flex;
             align-items: center;
         }
-        
         .stat-icon {
             width: 60px;
             height: 60px;
@@ -379,66 +323,54 @@
             font-size: 1.5rem;
             color: var(--primary);
         }
-        
         .stat-info h3 {
             font-size: 1.8rem;
             margin-bottom: 5px;
         }
-        
         .stat-info p {
             color: #666;
             font-size: 0.9rem;
         }
-        
         /* 响应式设计 */
         @media (max-width: 992px) {
             .main-layout {
                 flex-direction: column;
             }
-            
             .sidebar {
                 width: 100%;
                 padding: 10px 0;
             }
-            
             .nav-menu {
                 display: flex;
                 overflow-x: auto;
             }
-            
             .nav-item {
                 margin-bottom: 0;
                 margin-right: 5px;
             }
-            
             .nav-link {
                 padding: 10px 15px;
                 border-radius: 4px;
                 white-space: nowrap;
             }
-            
             .nav-link:hover, .nav-link.active {
                 border-left: none;
                 border-bottom: 3px solid var(--accent);
             }
-            
             .col-6, .col-4 {
                 flex: 0 0 100%;
                 max-width: 100%;
                 margin-bottom: 20px;
             }
         }
-        
         @media (max-width: 768px) {
             .dashboard-header {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            
             .dashboard-actions {
                 margin-top: 15px;
             }
-            
             .stats-grid {
                 grid-template-columns: 1fr;
             }
@@ -462,7 +394,6 @@
             </div>
         </div>
     </header>
-
     <!-- 主布局 -->
     <div class="main-layout">
         <!-- 侧边栏 -->
@@ -476,7 +407,6 @@
                     <p>车队经理</p>
                 </div>
             </div>
-            
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#" class="nav-link active" data-target="dashboard">
@@ -520,7 +450,6 @@
                 </li>
             </ul>
         </div>
-
         <!-- 主内容区 -->
         <div class="main-content">
             <!-- 控制面板 -->
@@ -531,14 +460,15 @@
                         <p>DSpec Racing车队管理系统概览</p>
                     </div>
                     <div class="dashboard-actions">
-                        <button class="btn btn-primary">
+                        <!-- 为新增记录按钮添加唯一ID，以便脚本绑定事件 -->
+                        <button id="addRecordBtn" class="btn btn-primary">
                             <i class="fas fa-plus"></i> 新增记录
                         </button>
                     </div>
                 </div>
-                
                 <div class="stats-grid">
-                    <div class="stat-card">
+                    <!-- 每个统计卡片添加 data-target 用于导航，并设置光标为 pointer -->
+                    <div class="stat-card" data-target="vehicles" style="cursor:pointer;">
                         <div class="stat-icon">
                             <i class="fas fa-car"></i>
                         </div>
@@ -547,7 +477,7 @@
                             <p>可用车辆</p>
                         </div>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card" data-target="drivers" style="cursor:pointer;">
                         <div class="stat-icon">
                             <i class="fas fa-users"></i>
                         </div>
@@ -556,7 +486,7 @@
                             <p>注册车手</p>
                         </div>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card" data-target="events" style="cursor:pointer;">
                         <div class="stat-icon">
                             <i class="fas fa-flag-checkered"></i>
                         </div>
@@ -565,7 +495,7 @@
                             <p>年度赛事</p>
                         </div>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card" data-target="vehicles" style="cursor:pointer;">
                         <div class="stat-icon">
                             <i class="fas fa-tools"></i>
                         </div>
@@ -575,13 +505,13 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="row">
                     <div class="col-6">
                         <div class="card">
                             <div class="card-header">
                                 <h2>近期赛事</h2>
-                                <a href="#" class="btn btn-primary btn-sm">查看全部</a>
+                                <!-- 查看全部跳转到赛事管理模块 -->
+                                <a href="#" class="btn btn-primary btn-sm view-all-events" data-target="events">查看全部</a>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -600,7 +530,7 @@
                                                 <td>2025-08-22</td>
                                                 <td><span class="badge badge-success">已确认</span></td>
                                                 <td>
-                                                    <button class="btn btn-primary btn-sm">详情</button>
+                                                    <button class="btn btn-primary btn-sm event-detail" data-name="株洲F2漂移邀请赛" data-date="2025-08-22" data-location="株洲国际赛道" data-status="已确认">详情</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -608,7 +538,7 @@
                                                 <td>2025-11-15</td>
                                                 <td><span class="badge badge-warning">待确认</span></td>
                                                 <td>
-                                                    <button class="btn btn-primary btn-sm">详情</button>
+                                                    <button class="btn btn-primary btn-sm event-detail" data-name="CDC中国漂移锦标赛上海站" data-date="2025-11-15" data-location="上海嘉定赛车场" data-status="待确认">详情</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -616,7 +546,7 @@
                                                 <td>2026-03-20</td>
                                                 <td><span class="badge badge-warning">计划中</span></td>
                                                 <td>
-                                                    <button class="btn btn-primary btn-sm">详情</button>
+                                                    <button class="btn btn-primary btn-sm event-detail" data-name="D1GP中国系列赛珠海站" data-date="2026-03-20" data-location="珠海国际赛车场" data-status="计划中">详情</button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -625,12 +555,12 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="col-6">
                         <div class="card">
                             <div class="card-header">
                                 <h2>车辆状态</h2>
-                                <a href="#" class="btn btn-primary btn-sm">查看全部</a>
+                                <!-- 查看全部跳转到车辆管理模块 -->
+                                <a href="#" class="btn btn-primary btn-sm view-all-vehicles" data-target="vehicles">查看全部</a>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -646,19 +576,19 @@
                                         <tbody>
                                             <tr>
                                                 <td>DS001</td>
-                                                <td>DSpec Eurofighter</td>
+                                                <td>DSpec Full CarbonEurofighter</td>
                                                 <td><span class="badge badge-success">可用</span></td>
                                                 <td>2025-09-15</td>
                                             </tr>
                                             <tr>
                                                 <td>DS002</td>
-                                                <td>Nissan R34</td>
+                                                <td>Nissan 6.2LNOS      R34</td>
                                                 <td><span class="badge badge-warning">维护中</span></td>
                                                 <td>2025-08-30</td>
                                             </tr>
                                             <tr>
                                                 <td>DS003</td>
-                                                <td>Lamboghini HUrracan</td>
+                                                <td>Lamboghini 10.4L Hurracan</td>
                                                 <td><span class="badge badge-danger">维修中</span></td>
                                                 <td>2025-09-05</td>
                                             </tr>
@@ -670,7 +600,6 @@
                     </div>
                 </div>
             </div>
-            
             <!-- 车辆管理模块 -->
             <div class="module-section" id="vehicles">
                 <div class="dashboard-header">
@@ -684,13 +613,13 @@
                         </button>
                     </div>
                 </div>
-                
-                <div class="card">
+                    <div class="card">
                     <div class="card-header">
                         <h2>车辆档案</h2>
                         <div>
-                            <button class="btn btn-primary">导出数据</button>
-                            <button class="btn btn-success">添加记录</button>
+                            <!-- 导出数据和添加记录按钮添加ID以供脚本绑定 -->
+                            <button id="exportVehiclesBtn" class="btn btn-primary">导出数据</button>
+                            <button id="addVehicleBtn" class="btn btn-success">添加记录</button>
                         </div>
                     </div>
                     <div class="card-body">
@@ -706,38 +635,38 @@
                                         <th>操作</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="vehiclesTableBody">
                                     <tr>
-                                        <td>DS001</td>
-                                        <td>DSpec Eurofighter</td>
+                                        <td contenteditable="true">DS001</td>
+                                        <td contenteditable="true">DSpec full carbon Eurofighter</td>
                                         <td><span class="badge badge-success">可用</span></td>
-                                        <td>8</td>
-                                        <td>2025-09-15</td>
+                                        <td contenteditable="true">8</td>
+                                        <td contenteditable="true">2025-09-15</td>
                                         <td>
-                                            <button class="btn btn-primary btn-sm">详情</button>
-                                            <button class="btn btn-danger btn-sm">编辑</button>
+                                            <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
+                                            <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>DS002</td>
-                                        <td>Nissan S15</td>
+                                        <td contenteditable="true">DS002</td>
+                                        <td contenteditable="true">Nissan 6.2 NOS R34</td>
                                         <td><span class="badge badge-warning">维护中</span></td>
-                                        <td>12</td>
-                                        <td>2025-08-30</td>
+                                        <td contenteditable="true">12</td>
+                                        <td contenteditable="true">2025-08-30</td>
                                         <td>
-                                            <button class="btn btn-primary btn-sm">详情</button>
-                                            <button class="btn btn-danger btn-sm">编辑</button>
+                                            <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
+                                            <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>DS003</td>
-                                        <td>Toyota GR86</td>
+                                        <td contenteditable="true">DS003</td>
+                                        <td contenteditable="true">Lamboghini 10.4L hurracan</td>
                                         <td><span class="badge badge-danger">维修中</span></td>
-                                        <td>5</td>
-                                        <td>2025-09-05</td>
+                                        <td contenteditable="true">5</td>
+                                        <td contenteditable="true">2025-09-05</td>
                                         <td>
-                                            <button class="btn btn-primary btn-sm">详情</button>
-                                            <button class="btn btn-danger btn-sm">编辑</button>
+                                            <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
+                                            <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -745,12 +674,13 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="row">
                     <div class="col-6">
                         <div class="card">
                             <div class="card-header">
                                 <h2>部件库存</h2>
+                                <!-- 新增部件按钮 -->
+                                <button id="addPartBtn" class="btn btn-success btn-sm">新增部件</button>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -763,29 +693,29 @@
                                                 <th>操作</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="partsTableBody">
                                             <tr>
-                                                <td>NOS</td>
-                                                <td>3</td>
+                                                <td contenteditable="true">NOS</td>
+                                                <td contenteditable="true">3</td>
                                                 <td><span class="badge badge-success">充足</span></td>
                                                 <td>
-                                                    <button class="btn btn-primary btn-sm">订购</button>
+                                                    <button class="btn btn-primary btn-sm part-order">订购</button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>刹车片</td>
-                                                <td>2</td>
+                                                <td contenteditable="true">刹车片</td>
+                                                <td contenteditable="true">2</td>
                                                 <td><span class="badge badge-warning">不足</span></td>
                                                 <td>
-                                                    <button class="btn btn-primary btn-sm">订购</button>
+                                                    <button class="btn btn-primary btn-sm part-order">订购</button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>离合器套件</td>
-                                                <td>1</td>
+                                                <td contenteditable="true">离合器套件</td>
+                                                <td contenteditable="true">1</td>
                                                 <td><span class="badge badge-danger">紧缺</span></td>
                                                 <td>
-                                                    <button class="btn btn-primary btn-sm">订购</button>
+                                                    <button class="btn btn-primary btn-sm part-order">订购</button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -794,11 +724,12 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="col-6">
                         <div class="card">
                             <div class="card-header">
                                 <h2>轮胎/耗材记录</h2>
+                                <!-- 新增轮胎记录按钮 -->
+                                <button id="addTireBtn" class="btn btn-success btn-sm">新增记录</button>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -811,24 +742,24 @@
                                                 <th>剩余寿命</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="tiresTableBody">
                                             <tr>
-                                                <td>雷登半热熔</td>
-                                                <td>8/10</td>
-                                                <td>9/10</td>
-                                                <td>70%</td>
+                                                <td contenteditable="true">雷登半热熔</td>
+                                                <td contenteditable="true">8/10</td>
+                                                <td contenteditable="true">9/10</td>
+                                                <td contenteditable="true">70%</td>
                                             </tr>
                                             <tr>
-                                                <td>米其林 雨胎 Pilot sport 5</td>
-                                                <td>9/10</td>
-                                                <td>8/10</td>
-                                                <td>65%</td>
+                                                <td contenteditable="true">米其林 雨胎 Pilot sport 5</td>
+                                                <td contenteditable="true">9/10</td>
+                                                <td contenteditable="true">8/10</td>
+                                                <td contenteditable="true">65%</td>
                                             </tr>
                                             <tr>
-                                                <td>街胎 练习 待定</td>
-                                                <td>7/10</td>
-                                                <td>8/10</td>
-                                                <td>60%</td>
+                                                <td contenteditable="true">街胎 练习 待定</td>
+                                                <td contenteditable="true">7/10</td>
+                                                <td contenteditable="true">8/10</td>
+                                                <td contenteditable="true">60%</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -838,8 +769,7 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- 其他模块内容将在这里添加 -->
+            <!-- 车手管理模块 -->
             <div class="module-section" id="drivers">
                 <div class="dashboard-header">
                     <div class="dashboard-title">
@@ -847,15 +777,36 @@
                         <p>车手档案、培训计划和能力评估</p>
                     </div>
                 </div>
-                <!-- 车手管理内容 -->
+                <!-- 车手档案 -->
                 <div class="card">
+                    <div class="card-header">
+                        <h2>车手档案：Michael Tang</h2>
+                    </div>
                     <div class="card-body">
-                        <h3>车手档案系统</h3>
-                        <p>此模块正在开发中，将包含车手详细信息、能力六芒星图和培训计划。</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- 插入一张漂移车辆的图片作为视觉展示 -->
+                                <img src="massimo-p-qca6OGElmkk-unsplash.jpg" alt="Drift car" style="width:100%; height:auto; border-radius:8px; margin-bottom:15px;">
+                                <h3>基本信息</h3>
+                                <p>姓名：Michael&nbsp;Tang</p>
+                                <p>生日：1981年2月5日（44岁）</p>
+                                <p>国籍：中国</p>
+                                <p>赛车：BMW&nbsp;Z4&nbsp;Drift&nbsp;Spec、Lamborghini&nbsp;Huracán、Nissan&nbsp;R34、Nissan&nbsp;R35</p>
+                                <p>擅长：高速漂移、大角度甩尾</p>
+                                <p>简介：Michael&nbsp;Tang是DSpec&nbsp;Racing车队经验丰富的漂移车手，擅长激进的漂移追走角度和线路，曾多次在新西兰漂移赛事中获得好成绩。</p>
+                                <p>线上视频链接：
+                                    <a https://www.youtube.com/watch?v=soO_PkPWcp0">YouTube&nbsp;视频</a> |
+                                    <a href="https://www.instagram.com/michaeltangnz/">Instagram&nbsp;频道</a>
+                                </p>
+                            </div>
+                            <div class="col-6" style="display:flex; justify-content:center; align-items:center;">
+                                <canvas id="driverRadar" width="320" height="320"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
+            <!-- 赛事管理模块 -->
             <div class="module-section" id="events">
                 <div class="dashboard-header">
                     <div class="dashboard-title">
@@ -865,49 +816,778 @@
                 </div>
                 <!-- 赛事管理内容 -->
                 <div class="card">
+                    <div class="card-header">
+                        <h2>赛事列表</h2>
+                        <button id="addEventBtn" class="btn btn-success btn-sm">新增赛事</button>
+                    </div>
                     <div class="card-body">
-                        <h3>赛事管理系统</h3>
-                        <p>此模块正在开发中，将包含赛事日历、技术检查清单和报名准备清单。</p>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>赛事名称</th>
+                                        <th>日期</th>
+                                        <th>地点</th>
+                                        <th>状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="eventsTableBody">
+                                    <tr>
+                                        <td contenteditable="true">株洲F2漂移邀请赛</td>
+                                        <td contenteditable="true">2025-08-22</td>
+                                        <td contenteditable="true">株洲国际赛道</td>
+                                        <td><span class="badge badge-success">已确认</span></td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm event-detail" data-name="株洲F2漂移邀请赛" data-date="2025-08-22" data-location="株洲国际赛道" data-status="已确认">详情</button>
+                                            <button class="btn btn-danger btn-sm event-delete">删除</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">CDC中国漂移锦标赛上海站</td>
+                                        <td contenteditable="true">2025-11-15</td>
+                                        <td contenteditable="true">上海嘉定赛车场</td>
+                                        <td><span class="badge badge-warning">待确认</span></td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm event-detail" data-name="CDC中国漂移锦标赛上海站" data-date="2025-11-15" data-location="上海嘉定赛车场" data-status="待确认">详情</button>
+                                            <button class="btn btn-danger btn-sm event-delete">删除</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">D1GP中国系列赛珠海站</td>
+                                        <td contenteditable="true">2026-03-20</td>
+                                        <td contenteditable="true">珠海国际赛车场</td>
+                                        <td><span class="badge badge-warning">计划中</span></td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm event-detail" data-name="D1GP中国系列赛珠海站" data-date="2026-03-20" data-location="珠海国际赛车场" data-status="计划中">详情</button>
+                                            <button class="btn btn-danger btn-sm event-delete">删除</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>报名准备清单</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>为每场赛事准备报名材料和技术检查清单，包括证件复印件、赛车技术参数表、参赛者保险证明和授权书。可根据赛事要求自定义清单内容。</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- 更多模块内容... -->
-            
+            <!-- 后勤管理模块 -->
+            <div class="module-section" id="logistics">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h1>后勤管理</h1>
+                        <p>供应商数据库、练习场地资源与出行住宿标准</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>供应商数据库</h2>
+                        <button id="addSupplierBtn" class="btn btn-success btn-sm">新增供应商</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>供应商名称</th>
+                                        <th>服务评估</th>
+                                        <th>联系方式</th>
+                                        <th>关键指标</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="suppliersTableBody">
+                                    <tr>
+                                        <td contenteditable="true">ABC轮胎供应商</td>
+                                        <td contenteditable="true">优秀</td>
+                                        <td contenteditable="true">+86-10-12345678</td>
+                                        <td contenteditable="true">质量/成本/交货</td>
+                                        <td><button class="btn btn-danger btn-sm supplier-delete">删除</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">SpeedParts部件商</td>
+                                        <td contenteditable="true">良好</td>
+                                        <td contenteditable="true">+86-21-87654321</td>
+                                        <td contenteditable="true">服务/技术</td>
+                                        <td><button class="btn btn-danger btn-sm supplier-delete">删除</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="margin-top:10px;">供应商绩效评估可采用七大指标体系，包括质量、成本、交货、服务、技术、资产和员工与流程等方面【611348214694634†L31-L40】。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>场地/练习资源档案</h2>
+                        <button id="addVenueBtn" class="btn btn-success btn-sm">新增场地</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>场地名称</th>
+                                        <th>位置</th>
+                                        <th>出租费用</th>
+                                        <th>可用时间</th>
+                                        <th>设施条件</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="venuesTableBody">
+                                    <tr>
+                                        <td contenteditable="true">DSpec测试场</td>
+                                        <td contenteditable="true">湖南株洲</td>
+                                        <td contenteditable="true">¥5,000/天</td>
+                                        <td contenteditable="true">周一至周五</td>
+                                        <td contenteditable="true">休息室/维修区/计时系统</td>
+                                        <td><button class="btn btn-danger btn-sm venue-delete">删除</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">赛道A</td>
+                                        <td contenteditable="true">上海嘉定</td>
+                                        <td contenteditable="true">¥8,000/天</td>
+                                        <td contenteditable="true">周末</td>
+                                        <td contenteditable="true">维修区/观众看台</td>
+                                        <td><button class="btn btn-danger btn-sm venue-delete">删除</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="margin-top:10px;">记录可用的练习场地及测试场地信息，包括场地名称、位置、租金、可用时间段与设施条件，便于高效安排车辆和车手的训练计划。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>出行住宿标准库</h2>
+                        <button id="addHotelBtn" class="btn btn-success btn-sm">新增酒店/租车</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>名称</th>
+                                        <th>类型</th>
+                                        <th>价格/标准</th>
+                                        <th>备注</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="hotelsTableBody">
+                                    <tr>
+                                        <td contenteditable="true">假日酒店</td>
+                                        <td contenteditable="true">酒店</td>
+                                        <td contenteditable="true">¥600/晚（含早餐）</td>
+                                        <td contenteditable="true">近赛道</td>
+                                        <td><button class="btn btn-danger btn-sm hotel-delete">删除</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">SUV租赁</td>
+                                        <td contenteditable="true">租车</td>
+                                        <td contenteditable="true">¥800/天（含保险）</td>
+                                        <td contenteditable="true">提供驾驶员</td>
+                                        <td><button class="btn btn-danger btn-sm hotel-delete">删除</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="margin-top:10px;">建立酒店和租车供应商标准库，列出推荐酒店、房型价格、餐饮服务及租车标准（车型、费用、保险要求等），为出行和比赛期间提供统一的住宿与交通规范。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 运营系统模块 -->
+            <div class="module-section" id="operations">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h1>运营系统</h1>
+                        <p>客户旅程管理、比赛运营SOP及客户定位策略</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h2>客户旅程管理</h2></div>
+                    <div class="card-body">
+                        <p>采用客户旅程管理（CJM）方法，以客户为中心对品牌触点进行系统化识别、跟踪、分析和优化，提升满意度和转化率【143751417492133†L62-L68】。关键步骤包括绘制旅程地图（梳理行为路径和情绪曲线等）、整合多渠道数据以获得统一客户视图、设置个性化触发规则、在多个渠道上保持一致执行，并通过A/B测试持续优化【143751417492133†L72-L99】。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h2>比赛运营SOP</h2></div>
+                    <div class="card-body">
+                        <p>制定标准化的赛事运营流程，包括赛前准备、技术检验、报名管理、现场协调及赛后总结。为应对突发情况，需要配备应急预案和安全保障措施，明确责任分工，并定期进行演练，以保障赛事顺利进行。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h2>客户类型定位策略</h2></div>
+                    <div class="card-body">
+                        <p>通过需求分析和客户细分，根据客户行为、偏好和价值识别不同类型客户，建立匹配模型，为赞助商和合作伙伴提供更精准的服务和营销策略。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 法务与保险模块 -->
+            <div class="module-section" id="legal">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h1>法务与保险</h1>
+                        <p>合约模板和保险管理</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>法务合约模板</h2>
+                        <button id="addContractBtn" class="btn btn-success btn-sm">新增模板</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>模板名称</th>
+                                        <th>类型</th>
+                                        <th>更新时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="contractsTableBody">
+                                    <tr>
+                                        <td contenteditable="true">合作协议模板</td>
+                                        <td contenteditable="true">合同</td>
+                                        <td contenteditable="true">2025-07-01</td>
+                                        <td><button class="btn btn-danger btn-sm contract-delete">删除</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">免责协议模板</td>
+                                        <td contenteditable="true">协议</td>
+                                        <td contenteditable="true">2025-06-15</td>
+                                        <td><button class="btn btn-danger btn-sm contract-delete">删除</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="margin-top:10px;">标准化合作协议和免责协议模板包括合作双方的权利义务、费用条款、保密条款以及争议解决机制，为车队与供应商、赞助商、车手之间的合作提供法律依据。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>保险管理</h2>
+                        <button id="addInsuranceBtn" class="btn btn-success btn-sm">新增保险</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>保险类别</th>
+                                        <th>保险金额</th>
+                                        <th>期限</th>
+                                        <th>承保范围</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="insuranceTableBody">
+                                    <tr>
+                                        <td contenteditable="true">车辆保险</td>
+                                        <td contenteditable="true">¥200,000</td>
+                                        <td contenteditable="true">2025/01/01-2025/12/31</td>
+                                        <td contenteditable="true">赛场事故/运输损失</td>
+                                        <td><button class="btn btn-danger btn-sm insurance-delete">删除</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">人员保险</td>
+                                        <td contenteditable="true">¥100,000</td>
+                                        <td contenteditable="true">2025/03/01-2026/02/28</td>
+                                        <td contenteditable="true">意外伤害/医疗</td>
+                                        <td><button class="btn btn-danger btn-sm insurance-delete">删除</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="margin-top:10px;">管理车辆、设备和人员的各类保险记录，包含保单种类、保险期限、保险金额及承保范围，并梳理理赔流程，确保赛场内外的风险得到妥善保障。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 预算追踪模块 -->
+            <div class="module-section" id="budget">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h1>预算追踪</h1>
+                        <p>预算与支出对比及成本分析</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>预算与实际支出对比</h2>
+                        <button id="addBudgetItemBtn" class="btn btn-success btn-sm">新增预算项</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>项目名称</th>
+                                        <th>预算金额</th>
+                                        <th>实际支出</th>
+                                        <th>偏差</th>
+                                        <th>备注</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="budgetTableBody">
+                                    <tr>
+                                        <td contenteditable="true">车辆维护</td>
+                                        <td contenteditable="true">¥50,000</td>
+                                        <td contenteditable="true">¥45,000</td>
+                                        <td contenteditable="true">-¥5,000</td>
+                                        <td contenteditable="true">正常维护</td>
+                                        <td><button class="btn btn-danger btn-sm budget-delete">删除</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">赛事报名</td>
+                                        <td contenteditable="true">¥20,000</td>
+                                        <td contenteditable="true">¥22,000</td>
+                                        <td contenteditable="true">+¥2,000</td>
+                                        <td contenteditable="true">费用上浮</td>
+                                        <td><button class="btn btn-danger btn-sm budget-delete">删除</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="margin-top:10px;">建立预算追踪表，定期比较预算数与实际支出，针对偏差进行分析并采取调整措施，帮助项目控制成本。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>项目成本分析和ROI评估</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>通过汇总项目收益与成本，对各项活动进行成本分析和投资回报率（ROI）评估。ROI表示投资收益与成本之间的百分比，其计算公式为（投资现值－投资成本）/投资成本×100%【487517483389791†L176-L181】。该指标有助于衡量赛事和推广活动的经济效益，为资源分配决策提供依据。</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        // 模块切换功能
+        // 模块切换功能和图表初始化
+        function initDashboard() {
+            console.log('初始化仪表板...');
+        }
+        function renderDriverChart() {
+            const canvas = document.getElementById('driverRadar');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            // 销毁已有图表实例以避免重复渲染
+            if (window.driverRadarChart) {
+                window.driverRadarChart.destroy();
+            }
+            window.driverRadarChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['风格','稳定性','角度','线路','专注度','追走'],
+                    datasets: [{
+                        label: '六芒星评分',
+                        data: [8,6,9,7,6,8],
+                        backgroundColor: 'rgba(6, 0, 225, 0.2)',
+                        borderColor: 'rgba(6, 0, 225, 1)',
+                        pointBackgroundColor: 'rgba(225, 6, 0, 1)',
+                        pointBorderColor: 'rgba(225, 6, 0, 1)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        r: {
+                            min: 0,
+                            max: 10,
+                            ticks: {
+                                stepSize: 2,
+                                color: '#666',
+                                backdropColor: 'transparent'
+                            },
+                            grid: {
+                                color: 'rgba(0,0,0,0.1)'
+                            },
+                            angleLines: {
+                                color: 'rgba(0,0,0,0.1)'
+                            },
+                            pointLabels: {
+                                color: '#333',
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-link');
             const moduleSections = document.querySelectorAll('.module-section');
-            
+            // 切换模块的通用函数
+            function activateModule(targetId) {
+                navLinks.forEach(item => item.classList.remove('active'));
+                moduleSections.forEach(section => section.classList.remove('active'));
+                // 找到对应侧边栏链接并激活
+                const activeLink = Array.from(navLinks).find(link => link.getAttribute('data-target') === targetId);
+                if (activeLink) activeLink.classList.add('active');
+                const section = document.getElementById(targetId);
+                if (section) section.classList.add('active');
+                if (targetId === 'drivers') {
+                    renderDriverChart();
+                }
+            }
+            // 绑定侧边栏点击事件
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
-                    // 移除所有活动状态
-                    navLinks.forEach(item => item.classList.remove('active'));
-                    moduleSections.forEach(section => section.classList.remove('active'));
-                    
-                    // 添加当前活动状态
-                    this.classList.add('active');
-                    
-                    // 显示对应模块
                     const targetId = this.getAttribute('data-target');
-                    document.getElementById(targetId).classList.add('active');
+                    activateModule(targetId);
                 });
             });
-            
-            // 初始化图表等组件
+            // 点击统计卡片跳转
+            document.querySelectorAll('.stat-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    if (targetId) {
+                        activateModule(targetId);
+                    }
+                });
+            });
+            // 新增记录按钮
+            const addRecordBtn = document.getElementById('addRecordBtn');
+            if (addRecordBtn) {
+                addRecordBtn.addEventListener('click', function() {
+                    const type = prompt('请输入要新增的记录类型（车辆/车手/赛事）');
+                    if (type) {
+                        alert('新增"' + type + '"功能暂未实现，请在相应模块中使用添加按钮');
+                    }
+                });
+            }
+            // 查看全部按钮跳转到对应模块
+            document.querySelectorAll('.view-all-events, .view-all-vehicles').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('data-target');
+                    activateModule(targetId);
+                });
+            });
+            // 事件委托处理各种按钮点击
+            document.body.addEventListener('click', function(e) {
+                // 赛事详情
+                if (e.target.classList.contains('event-detail')) {
+                    const name = e.target.getAttribute('data-name');
+                    const date = e.target.getAttribute('data-date');
+                    const location = e.target.getAttribute('data-location');
+                    const status = e.target.getAttribute('data-status');
+                    alert('赛事名称：' + name + '\n日期：' + date + '\n地点：' + location + '\n状态：' + status);
+                }
+                // 删除赛事
+                if (e.target.classList.contains('event-delete')) {
+                    const row = e.target.closest('tr');
+                    if (row && confirm('确定要删除该赛事吗？')) {
+                        row.remove();
+                    }
+                }
+                // 车辆详情
+                if (e.target.classList.contains('vehicle-detail')) {
+                    const row = e.target.closest('tr');
+                    const id = row.children[0].textContent;
+                    const model = row.children[1].textContent;
+                    const statusEl = row.children[2].textContent.trim();
+                    const uses = row.children[3].textContent;
+                    const next = row.children[4].textContent;
+                    alert('车辆编号：' + id + '\n型号：' + model + '\n状态：' + statusEl + '\n年度使用次数：' + uses + '\n下次维护：' + next);
+                }
+                // 编辑车辆提示
+                if (e.target.classList.contains('vehicle-edit')) {
+                    alert('请直接在表格中修改车辆信息，修改后自动保存到前端。');
+                }
+                // 删除部件
+                if (e.target.classList.contains('part-order')) {
+                    alert('订购功能暂未实现，请联系供应商手动订购。');
+                }
+                // 删除供应商
+                if (e.target.classList.contains('supplier-delete')) {
+                    const row = e.target.closest('tr');
+                    if (row && confirm('确定删除该供应商吗？')) {
+                        row.remove();
+                    }
+                }
+                // 删除场地
+                if (e.target.classList.contains('venue-delete')) {
+                    const row = e.target.closest('tr');
+                    if (row && confirm('确定删除该场地吗？')) {
+                        row.remove();
+                    }
+                }
+                // 删除酒店/租车
+                if (e.target.classList.contains('hotel-delete')) {
+                    const row = e.target.closest('tr');
+                    if (row && confirm('确定删除该记录吗？')) {
+                        row.remove();
+                    }
+                }
+                // 删除合同模板
+                if (e.target.classList.contains('contract-delete')) {
+                    const row = e.target.closest('tr');
+                    if (row && confirm('确定删除该模板吗？')) {
+                        row.remove();
+                    }
+                }
+                // 删除保险
+                if (e.target.classList.contains('insurance-delete')) {
+                    const row = e.target.closest('tr');
+                    if (row && confirm('确定删除该保险记录吗？')) {
+                        row.remove();
+                    }
+                }
+                // 删除预算项
+                if (e.target.classList.contains('budget-delete')) {
+                    const row = e.target.closest('tr');
+                    if (row && confirm('确定删除该预算项吗？')) {
+                        row.remove();
+                    }
+                }
+            });
+            // 车辆管理功能
+            const exportVehiclesBtn = document.getElementById('exportVehiclesBtn');
+            if (exportVehiclesBtn) {
+                exportVehiclesBtn.addEventListener('click', function() {
+                    alert('车辆数据已导出（示例）。');
+                });
+            }
+            const addVehicleBtn = document.getElementById('addVehicleBtn');
+            if (addVehicleBtn) {
+                addVehicleBtn.addEventListener('click', function() {
+                    const id = prompt('请输入车辆编号：');
+                    if (!id) return;
+                    const model = prompt('请输入车辆型号：');
+                    if (!model) return;
+                    const status = prompt('请输入车辆状态（可用/维护中/维修中）：', '可用');
+                    const uses = prompt('请输入年度使用次数：', '0');
+                    const next = prompt('请输入下次维护日期：', '2025-12-31');
+                    const tbody = document.getElementById('vehiclesTableBody');
+                    const tr = document.createElement('tr');
+                    // 根据状态选择徽标样式
+                    let badgeClass = 'badge-success';
+                    if (status === '维护中') badgeClass = 'badge-warning';
+                    if (status === '维修中') badgeClass = 'badge-danger';
+                    tr.innerHTML = `<td contenteditable="true">${id}</td>
+                        <td contenteditable="true">${model}</td>
+                        <td><span class="badge ${badgeClass}">${status}</span></td>
+                        <td contenteditable="true">${uses}</td>
+                        <td contenteditable="true">${next}</td>
+                        <td><button class="btn btn-primary btn-sm vehicle-detail">详情</button> <button class="btn btn-danger btn-sm vehicle-edit">编辑</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增部件
+            const addPartBtn = document.getElementById('addPartBtn');
+            if (addPartBtn) {
+                addPartBtn.addEventListener('click', function() {
+                    const name = prompt('请输入部件名称：');
+                    if (!name) return;
+                    const qtyStr = prompt('请输入库存数量：', '1');
+                    const qty = parseInt(qtyStr, 10) || 0;
+                    let statusClass = 'badge-success';
+                    let statusText = '充足';
+                    if (qty <= 1) {
+                        statusClass = 'badge-danger';
+                        statusText = '紧缺';
+                    } else if (qty === 2) {
+                        statusClass = 'badge-warning';
+                        statusText = '不足';
+                    }
+                    const tbody = document.getElementById('partsTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${name}</td>
+                        <td contenteditable="true">${qty}</td>
+                        <td><span class="badge ${statusClass}">${statusText}</span></td>
+                        <td><button class="btn btn-primary btn-sm part-order">订购</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增轮胎记录
+            const addTireBtn = document.getElementById('addTireBtn');
+            if (addTireBtn) {
+                addTireBtn.addEventListener('click', function() {
+                    const brand = prompt('请输入品牌/型号：');
+                    if (!brand) return;
+                    const wear = prompt('请输入磨耗表现（例如 8/10）：', '8/10');
+                    const temp = prompt('请输入温度表现（例如 8/10）：', '8/10');
+                    const life = prompt('请输入剩余寿命百分比（例如 60%）：', '60%');
+                    const tbody = document.getElementById('tiresTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${brand}</td>
+                        <td contenteditable="true">${wear}</td>
+                        <td contenteditable="true">${temp}</td>
+                        <td contenteditable="true">${life}</td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增赛事
+            const addEventBtn = document.getElementById('addEventBtn');
+            if (addEventBtn) {
+                addEventBtn.addEventListener('click', function() {
+                    const name = prompt('请输入赛事名称：');
+                    if (!name) return;
+                    const date = prompt('请输入日期（YYYY-MM-DD）：', '2025-01-01');
+                    const location = prompt('请输入地点：', '某地');
+                    const status = prompt('请输入状态（已确认/待确认/计划中）：', '待确认');
+                    let badgeClass = 'badge-success';
+                    if (status === '待确认') badgeClass = 'badge-warning';
+                    if (status === '计划中') badgeClass = 'badge-warning';
+                    const tbody = document.getElementById('eventsTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${name}</td>
+                        <td contenteditable="true">${date}</td>
+                        <td contenteditable="true">${location}</td>
+                        <td><span class="badge ${badgeClass}">${status}</span></td>
+                        <td><button class="btn btn-primary btn-sm event-detail" data-name="${name}" data-date="${date}" data-location="${location}" data-status="${status}">详情</button> <button class="btn btn-danger btn-sm event-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增供应商
+            const addSupplierBtn = document.getElementById('addSupplierBtn');
+            if (addSupplierBtn) {
+                addSupplierBtn.addEventListener('click', function() {
+                    const name = prompt('请输入供应商名称：');
+                    if (!name) return;
+                    const rating = prompt('请输入服务评估：', '良好');
+                    const contact = prompt('请输入联系方式：', '+86-');
+                    const metrics = prompt('请输入关键指标：', '质量/成本');
+                    const tbody = document.getElementById('suppliersTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${name}</td>
+                        <td contenteditable="true">${rating}</td>
+                        <td contenteditable="true">${contact}</td>
+                        <td contenteditable="true">${metrics}</td>
+                        <td><button class="btn btn-danger btn-sm supplier-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增场地
+            const addVenueBtn = document.getElementById('addVenueBtn');
+            if (addVenueBtn) {
+                addVenueBtn.addEventListener('click', function() {
+                    const name = prompt('请输入场地名称：');
+                    if (!name) return;
+                    const loc = prompt('请输入位置：', '某地');
+                    const price = prompt('请输入出租费用：', '¥0/天');
+                    const time = prompt('请输入可用时间：', '周一至周五');
+                    const facilities = prompt('请输入设施条件：', '');
+                    const tbody = document.getElementById('venuesTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${name}</td>
+                        <td contenteditable="true">${loc}</td>
+                        <td contenteditable="true">${price}</td>
+                        <td contenteditable="true">${time}</td>
+                        <td contenteditable="true">${facilities}</td>
+                        <td><button class="btn btn-danger btn-sm venue-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增酒店/租车
+            const addHotelBtn = document.getElementById('addHotelBtn');
+            if (addHotelBtn) {
+                addHotelBtn.addEventListener('click', function() {
+                    const name = prompt('请输入名称：');
+                    if (!name) return;
+                    const type = prompt('请输入类型（酒店/租车）：', '酒店');
+                    const price = prompt('请输入价格/标准：', '¥0');
+                    const remark = prompt('请输入备注：', '');
+                    const tbody = document.getElementById('hotelsTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${name}</td>
+                        <td contenteditable="true">${type}</td>
+                        <td contenteditable="true">${price}</td>
+                        <td contenteditable="true">${remark}</td>
+                        <td><button class="btn btn-danger btn-sm hotel-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增合同模板
+            const addContractBtn = document.getElementById('addContractBtn');
+            if (addContractBtn) {
+                addContractBtn.addEventListener('click', function() {
+                    const name = prompt('请输入模板名称：');
+                    if (!name) return;
+                    const type = prompt('请输入类型（合同/协议）：', '合同');
+                    const updated = prompt('请输入更新时间：', '2025-01-01');
+                    const tbody = document.getElementById('contractsTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${name}</td>
+                        <td contenteditable="true">${type}</td>
+                        <td contenteditable="true">${updated}</td>
+                        <td><button class="btn btn-danger btn-sm contract-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增保险
+            const addInsuranceBtn = document.getElementById('addInsuranceBtn');
+            if (addInsuranceBtn) {
+                addInsuranceBtn.addEventListener('click', function() {
+                    const type = prompt('请输入保险类别：');
+                    if (!type) return;
+                    const amount = prompt('请输入保险金额：', '¥0');
+                    const period = prompt('请输入保险期限：', '2025/01/01-2025/12/31');
+                    const coverage = prompt('请输入承保范围：', '');
+                    const tbody = document.getElementById('insuranceTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${type}</td>
+                        <td contenteditable="true">${amount}</td>
+                        <td contenteditable="true">${period}</td>
+                        <td contenteditable="true">${coverage}</td>
+                        <td><button class="btn btn-danger btn-sm insurance-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增预算项
+            const addBudgetItemBtn = document.getElementById('addBudgetItemBtn');
+            if (addBudgetItemBtn) {
+                addBudgetItemBtn.addEventListener('click', function() {
+                    const project = prompt('请输入项目名称：');
+                    if (!project) return;
+                    const budget = prompt('请输入预算金额：', '¥0');
+                    const actual = prompt('请输入实际支出：', '¥0');
+                    // 计算偏差
+                    let deviation = '';
+                    try {
+                        const bNum = parseFloat(budget.replace(/[^\d.-]/g, ''));
+                        const aNum = parseFloat(actual.replace(/[^\d.-]/g, ''));
+                        const diff = aNum - bNum;
+                        deviation = (diff >= 0 ? '+' : '-') + '¥' + Math.abs(diff).toLocaleString();
+                    } catch (ex) {
+                        deviation = '0';
+                    }
+                    const remark = prompt('请输入备注：', '');
+                    const tbody = document.getElementById('budgetTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${project}</td>
+                        <td contenteditable="true">${budget}</td>
+                        <td contenteditable="true">${actual}</td>
+                        <td contenteditable="true">${deviation}</td>
+                        <td contenteditable="true">${remark}</td>
+                        <td><button class="btn btn-danger btn-sm budget-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 初始化仪表板和初始图表
             initDashboard();
+            renderDriverChart();
         });
-        
-        function initDashboard() {
-            // 这里可以初始化图表和其他动态组件
-            console.log('初始化仪表板...');
-        }
     </script>
 </body>
 </html>
