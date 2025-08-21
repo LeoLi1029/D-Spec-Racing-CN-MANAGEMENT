@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -375,6 +375,88 @@
                 grid-template-columns: 1fr;
             }
         }
+
+/* 适配 iPhone 14 Pro 等窄屏手机的样式 */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.85rem;
+    }
+    header {
+        padding: 0.6rem 0;
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    .header-actions {
+        margin-top: 8px;
+    }
+    .sidebar {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .nav-menu {
+        display: flex;
+        overflow-x: auto;
+    }
+    .nav-link {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin-right: 10px;
+    }
+    .user-info h3 {
+        font-size: 0.9rem;
+    }
+    .user-info p {
+        font-size: 0.7rem;
+    }
+    .main-content {
+        padding: 10px;
+    }
+    .dashboard-title h1 {
+        font-size: 1.4rem;
+    }
+    .dashboard-title p {
+        font-size: 0.8rem;
+    }
+    .card-header h2 {
+        font-size: 1rem;
+    }
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    .stat-info h3 {
+        font-size: 1.4rem;
+    }
+    .stat-info p {
+        font-size: 0.75rem;
+    }
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+    img {
+        border-radius: 4px;
+    }
+    canvas#driverRadar {
+        width: 250px !important;
+        height: 250px !important;
+    }
+}
     </style>
 </head>
 <body>
@@ -446,6 +528,26 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link" data-target="budget">
                         <i class="fas fa-chart-line"></i> 预算追踪
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-target="analytics">
+                        <i class="fas fa-chart-bar"></i> 数据分析
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-target="news">
+                        <i class="fas fa-newspaper"></i> 新闻资讯
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-target="shop">
+                        <i class="fas fa-shopping-cart"></i> 商店
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-target="forum">
+                        <i class="fas fa-comments"></i> 论坛
                     </a>
                 </li>
             </ul>
@@ -576,13 +678,13 @@
                                         <tbody>
                                             <tr>
                                                 <td>DS001</td>
-                                                <td>DSpec Full CarbonEurofighter</td>
+                                                <td>DSpec Eurofighter（全碳纤维）</td>
                                                 <td><span class="badge badge-success">可用</span></td>
                                                 <td>2025-09-15</td>
                                             </tr>
                                             <tr>
                                                 <td>DS002</td>
-                                                <td>Nissan 6.2LNOS      R34</td>
+                                                <td>Nissan 6.2L NOS R34 </td>
                                                 <td><span class="badge badge-warning">维护中</span></td>
                                                 <td>2025-08-30</td>
                                             </tr>
@@ -636,9 +738,10 @@
                                     </tr>
                                 </thead>
                                 <tbody id="vehiclesTableBody">
+                                    <!-- 车辆列表包含所有参赛车辆，可编辑和扩展 -->
                                     <tr>
                                         <td contenteditable="true">DS001</td>
-                                        <td contenteditable="true">DSpec full carbon Eurofighter</td>
+                                        <td contenteditable="true">DSpec Eurofighter（全碳纤维）</td>
                                         <td><span class="badge badge-success">可用</span></td>
                                         <td contenteditable="true">8</td>
                                         <td contenteditable="true">2025-09-15</td>
@@ -649,7 +752,7 @@
                                     </tr>
                                     <tr>
                                         <td contenteditable="true">DS002</td>
-                                        <td contenteditable="true">Nissan 6.2 NOS R34</td>
+                                        <td contenteditable="true">Nissan S14 (5.7L) </td>
                                         <td><span class="badge badge-warning">维护中</span></td>
                                         <td contenteditable="true">12</td>
                                         <td contenteditable="true">2025-08-30</td>
@@ -660,10 +763,54 @@
                                     </tr>
                                     <tr>
                                         <td contenteditable="true">DS003</td>
-                                        <td contenteditable="true">Lamboghini 10.4L hurracan</td>
+                                        <td contenteditable="true">Nissan 180sx</td>
                                         <td><span class="badge badge-danger">维修中</span></td>
                                         <td contenteditable="true">5</td>
                                         <td contenteditable="true">2025-09-05</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
+                                            <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">DS004</td>
+                                        <td contenteditable="true">Lamborghini Huracán（10.4L）</td>
+                                        <td><span class="badge badge-success">可用</span></td>
+                                        <td contenteditable="true">0</td>
+                                        <td contenteditable="true">2025-10-10</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
+                                            <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">DS005</td>
+                                        <td contenteditable="true">Nissan R34（6.2L NOS）</td>
+                                        <td><span class="badge badge-success">可用</span></td>
+                                        <td contenteditable="true">0</td>
+                                        <td contenteditable="true">2025-11-20</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
+                                            <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">DS006</td>
+                                        <td contenteditable="true">Nissan R35</td>
+                                        <td><span class="badge badge-success">可用</span></td>
+                                        <td contenteditable="true">0</td>
+                                        <td contenteditable="true">2025-12-05</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
+                                            <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true">DS007</td>
+                                        <td contenteditable="true">BMW Z4 Drift Spec</td>
+                                        <td><span class="badge badge-success">可用</span></td>
+                                        <td contenteditable="true">0</td>
+                                        <td contenteditable="true">2025-12-20</td>
                                         <td>
                                             <button class="btn btn-primary btn-sm vehicle-detail">详情</button>
                                             <button class="btn btn-danger btn-sm vehicle-edit">编辑</button>
@@ -789,15 +936,26 @@
                                 <img src="massimo-p-qca6OGElmkk-unsplash.jpg" alt="Drift car" style="width:100%; height:auto; border-radius:8px; margin-bottom:15px;">
                                 <h3>基本信息</h3>
                                 <p>姓名：Michael&nbsp;Tang</p>
-                                <p>生日：1981年2月5日 </p>
+                                <p>生日：1981年2月5日</p>
                                 <p>国籍：中国</p>
                                 <p>赛车：BMW&nbsp;Z4&nbsp;Drift&nbsp;Spec、Lamborghini&nbsp;Huracán、Nissan&nbsp;R34、Nissan&nbsp;R35</p>
-                                <p>擅长：高速漂移、大角度甩尾</p>
-                                <p>简介：Michael&nbsp;Tang是DSpec&nbsp;Racing车队经验丰富的漂移车手，擅长激进的漂移追走角度和线路，曾多次在新西兰漂移赛事中获得好成绩。</p>
+                                <p>擅长：近距离追走、大角度甩尾</p>
+                                <p>简介：Michael&nbsp;Tang是DSpec&nbsp;Racing车队经验丰富的漂移车手，擅长激进的漂移角度和线路，曾多次在新西兰的漂移赛事中获得好成绩。</p>
                                 <p>线上视频链接：
-                                    <a href="https://www.youtube.com/watch?v=soO_PkPWcp0" target="_blank" rel="noopener">YouTube&nbsp;视频</a> |
-                                    <a href="https://www.instagram.com/michaeltangnz/" target="_blank" rel="noopener">Instagram&nbsp;频道</a>
+                                    <a href="https://youtu.be/GJslmC1o9Ok" target="_blank">YouTube&nbsp;视频</a> |
+                                    <a href="https://www.instagram.com/oversteertv/" target="_blank">Instagram&nbsp;频道</a>
                                 </p>
+
+<div style="margin-top:15px;">
+    <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/CU5SgvqqoO8"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</div>
+
                             </div>
                             <div class="col-6" style="display:flex; justify-content:center; align-items:center;">
                                 <canvas id="driverRadar" width="320" height="320"></canvas>
@@ -805,31 +963,40 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- 车手档案：Leo Li -->
+                <!-- 新增车手档案：Leo Li -->
                 <div class="card">
-                  <div class="card-header">
-                    <h2>车手档案：Leo Li</h2>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h3>基本信息</h3>
-                        <p>姓名：Leo&nbsp;Li</p>
-                        <p>生日：1999年10月29日</p>
-                        <p>国籍：中国</p>
-                        <p>赛车：Nissan&nbsp;180SX</p>
-                        <p>擅长：雨天发挥，及精准线路领移、激进追走</p>
-                        <p>简介：DSpec 新人选手，2年赛龄，最好成绩是 Knockout&nbsp;King 分组冠军。</p>
-                        <p>线上视频链接：
-                          <a href="https://www.instagram.com/xanadu_leodrifting/" target="_blank" rel="noopener">Instagram</a>
-                        </p>
-                      </div>
-                      <div class="col-6" style="display:flex;justify-content:center;align-items:center;">
-                        <canvas id="driverRadarLeo" width="320" height="320"></canvas>
-                      </div>
+                    <div class="card-header">
+                        <h2>车手档案：Leo&nbsp;Li</h2>
                     </div>
-                  </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="sascha-pfyl-o3gxx7FogmE-unsplash.jpg" alt="Nissan 180SX" style="width:100%; height:auto; border-radius:8px; margin-bottom:15px;">
+                                <h3>基本信息</h3>
+                                <p>姓名：Leo&nbsp;Li</p>
+                                <p>生日：1999年10月29日</p>
+                                <p>国籍：中国</p>
+                                <p>赛车：Nissan&nbsp;180SX</p>
+                                <p>擅长：精准线路漂移、追走</p>
+                                <p>简介：2年赛龄，最好成绩是&nbsp;Knockout&nbsp;King&nbsp;分组冠军</p>
+                                <p>个人链接：
+                                    <a href="https://www.instagram.com/xanadu_leodrifting/" target="_blank">Instagram</a>
+                                </p>
+                                <div style="margin-top:15px;">
+                                    <iframe width="100%" height="315"
+                                        src="https://www.youtube.com/embed/JO7kfa249BA"
+                                        title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div class="col-6" style="display:flex; justify-content:center; align-items:center;">
+                                <canvas id="leoRadar" width="320" height="320"></canvas>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- 赛事管理模块 -->
@@ -952,7 +1119,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h2>场地/练习资源档案</h2>
-                        <button id="addVenueBtn" class="btn btn成功 btn-sm">新增场地</button>
+                        <button id="addVenueBtn" class="btn btn-success btn-sm">新增场地</button>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -1053,6 +1220,52 @@
                     <div class="card-header"><h2>客户类型定位策略</h2></div>
                     <div class="card-body">
                         <p>通过需求分析和客户细分，根据客户行为、偏好和价值识别不同类型客户，建立匹配模型，为赞助商和合作伙伴提供更精准的服务和营销策略。</p>
+                    </div>
+                </div>
+
+                <!-- CRM系统与客户关系管理 -->
+                <div class="card">
+                    <div class="card-header"><h2>CRM系统与客户关系管理</h2></div>
+                    <div class="card-body">
+                        <p>客户关系管理系统（CRM）是企业通过信息技术和流程设计来整合、收集、分析顾客信息，以更好地了解并区分顾客，从而提供适合其需求的产品或服务并管理企业与顾客的关系。其目标在于提高顾客满意度、忠诚度和维系率，同时有效选择和吸引高价值的新顾客。</p>
+                        <p>根据应用功能，CRM可分为三大类型：操作型、分析型和协同型。操作型CRM聚焦销售、营销和客服自动化，整合前后台业务流程；分析型CRM利用数据仓库、数据挖掘等技术分析顾客行为，为决策提供依据；协同型CRM则通过整合电话、网页、电子邮件等沟通渠道促进企业与客户之间的互动。此外，可按客户类别划分为B2C和B2B，并区分传统型与在线型CRM，以适应不同企业的业务架构和平台化需求。</p>
+                        <p>对于赛车队而言，CRM系统不仅用于记录赞助商、合作伙伴和粉丝的联系信息，还可建立积分和会员体系，跟踪潜在客户的兴趣点，利用自动化营销工具开展定向推送，并与财务系统集成以实现合同、票务和支付的闭环管理。</p>
+                    </div>
+                </div>
+
+                <!-- 数据分析与报告 -->
+                <div class="card">
+                    <div class="card-header"><h2>数据分析与报告</h2></div>
+                    <div class="card-body">
+                        <p>运营系统应内置数据分析和报表功能，结合赛事成绩、车辆状态、预算执行和客户互动等数据维度，构建可视化仪表盘。通过定期生成报表，可以评估车队运营效率、粉丝增长趋势、赞助曝光率和投资回报率，为决策提供依据。</p>
+                        <p>分析型CRM和BI工具可帮助识别影响客户体验的关键指标，及时发现异常趋势并通过预警系统提示管理者。例如通过热度分析确定最受欢迎的赛事或车手，通过模型预测赛事成本与收益，并与预算追踪模块联动及时调整资源分配。</p>
+                    </div>
+                </div>
+
+                <!-- 品牌与赞助管理 -->
+                <div class="card">
+                    <div class="card-header"><h2>品牌与赞助管理</h2></div>
+                    <div class="card-body">
+                        <p>统一管理品牌形象、赞助合同和市场推广活动，是运营系统的重要组成部分。通过创建赞助商数据库，可跟踪各赞助合同的权益内容、曝光周期及回报指标，确保合作伙伴获得预期的品牌价值。</p>
+                        <p>系统还应支持设计营销活动计划，如线上直播、粉丝互动、产品发布和媒体宣传，并与预算模块关联预算和ROI计算，帮助评估营销活动成效。</p>
+                    </div>
+                </div>
+
+                <!-- 社区与粉丝互动 -->
+                <div class="card">
+                    <div class="card-header"><h2>社区与粉丝互动</h2></div>
+                    <div class="card-body">
+                        <p>通过社交媒体、会员俱乐部和线下活动维系粉丝群体。运营系统可以集成官方微信公众号、微博、Instagram 和 YouTube 等渠道的数据，管理粉丝反馈并进行舆情分析。</p>
+                        <p>车队可设置会员等级和积分奖励机制，提供周边产品优先购买权、赛事VIP体验等福利，增强粉丝黏性。同时建立社区论坛与问答平台，让粉丝分享技巧和心得，形成良好的品牌社区。</p>
+                    </div>
+                </div>
+
+                <!-- 安全与合规 -->
+                <div class="card">
+                    <div class="card-header"><h2>安全与合规</h2></div>
+                    <div class="card-body">
+                        <p>赛车运营涉及高度的风险和严格的法规要求。运营系统需包含安全管理和合规检查模块，记录车辆和赛道安全检测结果，跟踪驾驶员培训及医疗体检情况，确保符合赛事规则。</p>
+                        <p>此外，应按照国家和国际汽车联合会（FIA）的规定，管理数据隐私和安全策略，更新保险和法务信息，与法务与保险模块协同工作，维护合同风险和事故应急预案。</p>
                     </div>
                 </div>
             </div>
@@ -1196,6 +1409,192 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 数据分析模块 -->
+            <div class="module-section" id="analytics">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h1>数据分析</h1>
+                        <p>车辆使用率、赛事成本和预算分布可视化</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header"><h2>车辆使用次数分布</h2></div>
+                            <div class="card-body" style="text-align:center;">
+                                <canvas id="vehicleUsageChart" width="320" height="240"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header"><h2>赛事成本趋势</h2></div>
+                            <div class="card-body" style="text-align:center;">
+                                <canvas id="eventCostChart" width="320" height="240"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header"><h2>预算分配比例</h2></div>
+                            <div class="card-body" style="text-align:center;">
+                                <canvas id="budgetPieChart" width="320" height="240"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header"><h2>粉丝增长趋势</h2></div>
+                            <div class="card-body" style="text-align:center;">
+                                <canvas id="fanGrowthChart" width="320" height="240"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新闻资讯模块 -->
+            <div class="module-section" id="news">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h1>新闻资讯</h1>
+                        <p>行业动态、赛事报道和技术文章</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h2>最新新闻</h2></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>标题</th>
+                                        <th>发布日期</th>
+                                        <th>来源</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>DSpec Racing签约新赞助商，提高车辆技术能力</td>
+                                        <td>2025-08-10</td>
+                                        <td>官方公告</td>
+                                        <td><button class="btn btn-primary btn-sm">详情</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>分析2025年漂移赛事走势，新规则将带来哪些影响？</td>
+                                        <td>2025-07-28</td>
+                                        <td>赛车社区</td>
+                                        <td><button class="btn btn-primary btn-sm">详情</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>顶级车手分享漂移技巧：如何控制角度与速度</td>
+                                        <td>2025-06-30</td>
+                                        <td>赛车学院</td>
+                                        <td><button class="btn btn-primary btn-sm">详情</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商店模块 -->
+            <div class="module-section" id="shop">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h1>官方商城</h1>
+                        <p>购买周边产品和赛车配件</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header"><h2>限量赛车模型</h2></div>
+                            <div class="card-body">
+                                <p>价格：¥599</p>
+                                <p>库存：20</p>
+                                <button class="btn btn-success btn-sm">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header"><h2>团队纪念T恤</h2></div>
+                            <div class="card-body">
+                                <p>价格：¥199</p>
+                                <p>库存：50</p>
+                                <button class="btn btn-success btn-sm">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header"><h2>碳纤维方向盘</h2></div>
+                            <div class="card-body">
+                                <p>价格：¥2,999</p>
+                                <p>库存：5</p>
+                                <button class="btn btn-success btn-sm">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 论坛模块 -->
+            <div class="module-section" id="forum">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h1>社区论坛</h1>
+                        <p>讨论漂移技巧、车辆改装和赛事心得</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h2>热门主题</h2></div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>主题</th>
+                                        <th>发帖人</th>
+                                        <th>回复数</th>
+                                        <th>最后回复时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>讨论如何优化车辆悬挂以提高漂移稳定性</td>
+                                        <td>DriftMaster</td>
+                                        <td>15</td>
+                                        <td>2025-08-19</td>
+                                        <td><button class="btn btn-primary btn-sm">查看</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>你认为今年最有看点的赛事是哪一场？</td>
+                                        <td>SpeedLover</td>
+                                        <td>8</td>
+                                        <td>2025-08-18</td>
+                                        <td><button class="btn btn-primary btn-sm">查看</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>分享你的赛车维修经验和技巧</td>
+                                        <td>GearHead</td>
+                                        <td>22</td>
+                                        <td>2025-08-15</td>
+                                        <td><button class="btn btn-primary btn-sm">查看</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -1205,97 +1604,238 @@
             console.log('初始化仪表板...');
         }
         function renderDriverChart() {
+            // 渲染 Michael Tang 的六芒星图表
             const canvas = document.getElementById('driverRadar');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            // 销毁已有图表实例以避免重复渲染
-            if (window.driverRadarChart) {
-                window.driverRadarChart.destroy();
-            }
-            window.driverRadarChart = new Chart(ctx, {
-                type: 'radar',
-                data: {
-                    labels: ['风格','稳定性','角度','线路','专注度','追走'],
-                    datasets: [{
-                        label: '六芒星评分',
-                        data: [8,6,9,7,6,8],
-                        backgroundColor: 'rgba(6, 0, 225, 0.2)',
-                        borderColor: 'rgba(6, 0, 225, 1)',
-                        pointBackgroundColor: 'rgba(225, 6, 0, 1)',
-                        pointBorderColor: 'rgba(225, 6, 0, 1)'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                // 销毁已有图表实例以避免重复渲染
+                if (window.driverRadarChart) {
+                    window.driverRadarChart.destroy();
+                }
+                window.driverRadarChart = new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['风格','稳定性','角度','线路','专注度','追走'],
+                        datasets: [{
+                            label: '六芒星评分',
+                            data: [8,6,9,7,6,8],
+                            backgroundColor: 'rgba(6, 0, 225, 0.2)',
+                            borderColor: 'rgba(6, 0, 225, 1)',
+                            pointBackgroundColor: 'rgba(225, 6, 0, 1)',
+                            pointBorderColor: 'rgba(225, 6, 0, 1)'
+                        }]
                     },
-                    scales: {
-                        r: {
-                            min: 0,
-                            max: 10,
-                            ticks: {
-                                stepSize: 2,
-                                color: '#666',
-                                backdropColor: 'transparent'
-                            },
-                            grid: {
-                                color: 'rgba(0,0,0,0.1)'
-                            },
-                            angleLines: {
-                                color: 'rgba(0,0,0,0.1)'
-                            },
-                            pointLabels: {
-                                color: '#333',
-                                font: {
-                                    size: 12
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            r: {
+                                min: 0,
+                                max: 10,
+                                ticks: {
+                                    stepSize: 2,
+                                    color: '#666',
+                                    backdropColor: 'transparent'
+                                },
+                                grid: {
+                                    color: 'rgba(0,0,0,0.1)'
+                                },
+                                angleLines: {
+                                    color: 'rgba(0,0,0,0.1)'
+                                },
+                                pointLabels: {
+                                    color: '#333',
+                                    font: {
+                                        size: 12
+                                    }
                                 }
                             }
                         }
                     }
-                }
-            });
-        }
-
-        // 新增：渲染 Leo Li 的六芒星
-        function renderDriverChartLeo() {
-            const canvas = document.getElementById('driverRadarLeo');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            if (window.driverRadarLeoChart) {
-                window.driverRadarLeoChart.destroy();
+                });
             }
-            window.driverRadarLeoChart = new Chart(ctx, {
-                type: 'radar',
-                data: {
-                    labels: ['风格','稳定性','角度','线路','专注度','追走'],
-                    datasets: [{
-                        label: '六芒星评分（Leo Li）',
-                        data: [7,6,7,9,7.5,9],
-                        backgroundColor: 'rgba(225, 6, 0, 0.18)',
-                        borderColor: 'rgba(225, 6, 0, 1)',
-                        pointBackgroundColor: 'rgba(6, 0, 225, 1)',
-                        pointBorderColor: 'rgba(6, 0, 225, 1)'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: { legend: { display: false } },
-                    scales: {
-                        r: {
-                            min: 0, max: 10,
-                            ticks: { stepSize: 2, color: '#666', backdropColor: 'transparent' },
-                            grid: { color: 'rgba(0,0,0,0.1)' },
-                            angleLines: { color: 'rgba(0,0,0,0.1)' },
-                            pointLabels: { color: '#333', font: { size: 12 } }
+            // 渲染新车手 Leo Li 的六芒星图表
+            const leoCanvas = document.getElementById('leoRadar');
+            if (leoCanvas) {
+                const ctxLeo = leoCanvas.getContext('2d');
+                if (window.leoRadarChart) {
+                    window.leoRadarChart.destroy();
+                }
+                window.leoRadarChart = new Chart(ctxLeo, {
+                    type: 'radar',
+                    data: {
+                        labels: ['风格','稳定性','角度','线路','专注度','追走'],
+                        datasets: [{
+                            label: '六芒星评分',
+                            data: [7,6,7,9,7.5,9],
+                            backgroundColor: 'rgba(6, 0, 225, 0.2)',
+                            borderColor: 'rgba(6, 0, 225, 1)',
+                            pointBackgroundColor: 'rgba(225, 6, 0, 1)',
+                            pointBorderColor: 'rgba(225, 6, 0, 1)'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            r: {
+                                min: 0,
+                                max: 10,
+                                ticks: {
+                                    stepSize: 2,
+                                    color: '#666',
+                                    backdropColor: 'transparent'
+                                },
+                                grid: {
+                                    color: 'rgba(0,0,0,0.1)'
+                                },
+                                angleLines: {
+                                    color: 'rgba(0,0,0,0.1)'
+                                },
+                                pointLabels: {
+                                    color: '#333',
+                                    font: {
+                                        size: 12
+                                    }
+                                }
+                            }
                         }
                     }
-                }
-            });
+                });
+            }
         }
 
+        // 渲染数据分析页的多个图表
+        function renderAnalyticsCharts() {
+            // 车辆使用次数分布 - 柱状图
+            const usageCtx = document.getElementById('vehicleUsageChart');
+            if (usageCtx) {
+                if (window.vehicleUsageChart) window.vehicleUsageChart.destroy();
+                window.vehicleUsageChart = new Chart(usageCtx.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['DS001','DS002','DS003','DS004','DS005','DS006','DS007'],
+                        datasets: [{
+                            label: '年度使用次数',
+                            data: [8, 12, 5, 3, 4, 2, 1],
+                            backgroundColor: 'rgba(6, 0, 225, 0.6)',
+                            borderColor: 'rgba(6, 0, 225, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: {
+                                ticks: { color: '#666' }
+                            },
+                            y: {
+                                beginAtZero: true,
+                                ticks: { color: '#666' }
+                            }
+                        },
+                        plugins: {
+                            legend: { display: false },
+                            title: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+            // 赛事成本趋势 - 折线图
+            const costCtx = document.getElementById('eventCostChart');
+            if (costCtx) {
+                if (window.eventCostChart) window.eventCostChart.destroy();
+                window.eventCostChart = new Chart(costCtx.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: ['1月','2月','3月','4月','5月','6月','7月','8月'],
+                        datasets: [{
+                            label: '赛事成本 (万元)',
+                            data: [30, 45, 25, 50, 40, 60, 35, 55],
+                            borderColor: 'rgba(225, 6, 0, 1)',
+                            backgroundColor: 'rgba(225, 6, 0, 0.2)',
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: { ticks: { color: '#666' } },
+                            y: { ticks: { color: '#666' } }
+                        },
+                        plugins: {
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+            // 预算分配比例 - 饼图
+            const budgetCtx = document.getElementById('budgetPieChart');
+            if (budgetCtx) {
+                if (window.budgetPieChart) window.budgetPieChart.destroy();
+                window.budgetPieChart = new Chart(budgetCtx.getContext('2d'), {
+                    type: 'pie',
+                    data: {
+                        labels: ['车辆维护','赛事报名','市场推广','人员费用','其他'],
+                        datasets: [{
+                            data: [40, 20, 15, 15, 10],
+                            backgroundColor: [
+                                'rgba(6, 0, 225, 0.8)',
+                                'rgba(225, 6, 0, 0.8)',
+                                'rgba(46, 204, 113, 0.8)',
+                                'rgba(241, 196, 15, 0.8)',
+                                'rgba(155, 89, 182, 0.8)'
+                            ]
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: { color: '#666', boxWidth: 12 }
+                            }
+                        }
+                    }
+                });
+            }
+            // 粉丝增长趋势 - 折线图
+            const fanCtx = document.getElementById('fanGrowthChart');
+            if (fanCtx) {
+                if (window.fanGrowthChart) window.fanGrowthChart.destroy();
+                window.fanGrowthChart = new Chart(fanCtx.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: ['1月','2月','3月','4月','5月','6月','7月','8月'],
+                        datasets: [{
+                            label: '粉丝数量 (万人)',
+                            data: [10, 12, 15, 20, 25, 28, 32, 38],
+                            borderColor: 'rgba(46, 204, 113, 1)',
+                            backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            x: { ticks: { color: '#666' } },
+                            y: { ticks: { color: '#666' } }
+                        },
+                        plugins: {
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+        }
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.nav-link');
             const moduleSections = document.querySelectorAll('.module-section');
@@ -1310,7 +1850,12 @@
                 if (section) section.classList.add('active');
                 if (targetId === 'drivers') {
                     renderDriverChart();
-                    renderDriverChartLeo(); // 新增：激活车手页时也渲染 Leo 的图
+                }
+                if (targetId === 'analytics') {
+                    // 稍微延时以确保 canvas 显示后再渲染图表
+                    setTimeout(function() {
+                        renderAnalyticsCharts();
+                    }, 100);
                 }
             }
             // 绑定侧边栏点击事件
@@ -1336,7 +1881,7 @@
                 addRecordBtn.addEventListener('click', function() {
                     const type = prompt('请输入要新增的记录类型（车辆/车手/赛事）');
                     if (type) {
-                        alert('新增\"' + type + '\"功能暂未实现，请在相应模块中使用添加按钮');
+                        alert('新增"' + type + '"功能暂未实现，请在相应模块中使用添加按钮');
                     }
                 });
             }
@@ -1356,7 +1901,7 @@
                     const date = e.target.getAttribute('data-date');
                     const location = e.target.getAttribute('data-location');
                     const status = e.target.getAttribute('data-status');
-                    alert('赛事名称：' + name + '\\n日期：' + date + '\\n地点：' + location + '\\n状态：' + status);
+                    alert('赛事名称：' + name + '\n日期：' + date + '\n地点：' + location + '\n状态：' + status);
                 }
                 // 删除赛事
                 if (e.target.classList.contains('event-delete')) {
@@ -1373,13 +1918,13 @@
                     const statusEl = row.children[2].textContent.trim();
                     const uses = row.children[3].textContent;
                     const next = row.children[4].textContent;
-                    alert('车辆编号：' + id + '\\n型号：' + model + '\\n状态：' + statusEl + '\\n年度使用次数：' + uses + '\\n下次维护：' + next);
+                    alert('车辆编号：' + id + '\n型号：' + model + '\n状态：' + statusEl + '\n年度使用次数：' + uses + '\n下次维护：' + next);
                 }
                 // 编辑车辆提示
                 if (e.target.classList.contains('vehicle-edit')) {
                     alert('请直接在表格中修改车辆信息，修改后自动保存到前端。');
                 }
-                // 订购部件
+                // 删除部件
                 if (e.target.classList.contains('part-order')) {
                     alert('订购功能暂未实现，请联系供应商手动订购。');
                 }
@@ -1426,10 +1971,232 @@
                     }
                 }
             });
+            // 车辆管理功能
+            const exportVehiclesBtn = document.getElementById('exportVehiclesBtn');
+            if (exportVehiclesBtn) {
+                exportVehiclesBtn.addEventListener('click', function() {
+                    alert('车辆数据已导出（示例）。');
+                });
+            }
+            const addVehicleBtn = document.getElementById('addVehicleBtn');
+            if (addVehicleBtn) {
+                addVehicleBtn.addEventListener('click', function() {
+                    const id = prompt('请输入车辆编号：');
+                    if (!id) return;
+                    const model = prompt('请输入车辆型号：');
+                    if (!model) return;
+                    const status = prompt('请输入车辆状态（可用/维护中/维修中）：', '可用');
+                    const uses = prompt('请输入年度使用次数：', '0');
+                    const next = prompt('请输入下次维护日期：', '2025-12-31');
+                    const tbody = document.getElementById('vehiclesTableBody');
+                    const tr = document.createElement('tr');
+                    // 根据状态选择徽标样式
+                    let badgeClass = 'badge-success';
+                    if (status === '维护中') badgeClass = 'badge-warning';
+                    if (status === '维修中') badgeClass = 'badge-danger';
+                    tr.innerHTML = `<td contenteditable="true">${id}</td>
+                        <td contenteditable="true">${model}</td>
+                        <td><span class="badge ${badgeClass}">${status}</span></td>
+                        <td contenteditable="true">${uses}</td>
+                        <td contenteditable="true">${next}</td>
+                        <td><button class="btn btn-primary btn-sm vehicle-detail">详情</button> <button class="btn btn-danger btn-sm vehicle-edit">编辑</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增部件
+            const addPartBtn = document.getElementById('addPartBtn');
+            if (addPartBtn) {
+                addPartBtn.addEventListener('click', function() {
+                    const name = prompt('请输入部件名称：');
+                    if (!name) return;
+                    const qtyStr = prompt('请输入库存数量：', '1');
+                    const qty = parseInt(qtyStr, 10) || 0;
+                    let statusClass = 'badge-success';
+                    let statusText = '充足';
+                    if (qty <= 1) {
+                        statusClass = 'badge-danger';
+                        statusText = '紧缺';
+                    } else if (qty === 2) {
+                        statusClass = 'badge-warning';
+                        statusText = '不足';
+                    }
+                    const tbody = document.getElementById('partsTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${name}</td>
+                        <td contenteditable="true">${qty}</td>
+                        <td><span class="badge ${statusClass}">${statusText}</span></td>
+                        <td><button class="btn btn-primary btn-sm part-order">订购</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增轮胎记录
+            const addTireBtn = document.getElementById('addTireBtn');
+            if (addTireBtn) {
+                addTireBtn.addEventListener('click', function() {
+                    const brand = prompt('请输入品牌/型号：');
+                    if (!brand) return;
+                    const wear = prompt('请输入磨耗表现（例如 8/10）：', '8/10');
+                    const temp = prompt('请输入温度表现（例如 8/10）：', '8/10');
+                    const life = prompt('请输入剩余寿命百分比（例如 60%）：', '60%');
+                    const tbody = document.getElementById('tiresTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${brand}</td>
+                        <td contenteditable="true">${wear}</td>
+                        <td contenteditable="true">${temp}</td>
+                        <td contenteditable="true">${life}</td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增赛事
+            const addEventBtn = document.getElementById('addEventBtn');
+            if (addEventBtn) {
+                addEventBtn.addEventListener('click', function() {
+                    const name = prompt('请输入赛事名称：');
+                    if (!name) return;
+                    const date = prompt('请输入日期（YYYY-MM-DD）：', '2025-01-01');
+                    const location = prompt('请输入地点：', '某地');
+                    const status = prompt('请输入状态（已确认/待确认/计划中）：', '待确认');
+                    let badgeClass = 'badge-success';
+                    if (status === '待确认') badgeClass = 'badge-warning';
+                    if (status === '计划中') badgeClass = 'badge-warning';
+                    const tbody = document.getElementById('eventsTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${name}</td>
+                        <td contenteditable="true">${date}</td>
+                        <td contenteditable="true">${location}</td>
+                        <td><span class="badge ${badgeClass}">${status}</span></td>
+                        <td><button class="btn btn-primary btn-sm event-detail" data-name="${name}" data-date="${date}" data-location="${location}" data-status="${status}">详情</button> <button class="btn btn-danger btn-sm event-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增供应商
+            const addSupplierBtn = document.getElementById('addSupplierBtn');
+            if (addSupplierBtn) {
+                addSupplierBtn.addEventListener('click', function() {
+                    const name = prompt('请输入供应商名称：');
+                    if (!name) return;
+                    const rating = prompt('请输入服务评估：', '良好');
+                    const contact = prompt('请输入联系方式：', '+86-');
+                    const metrics = prompt('请输入关键指标：', '质量/成本');
+                    const tbody = document.getElementById('suppliersTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${name}</td>
+                        <td contenteditable="true">${rating}</td>
+                        <td contenteditable="true">${contact}</td>
+                        <td contenteditable="true">${metrics}</td>
+                        <td><button class="btn btn-danger btn-sm supplier-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增场地
+            const addVenueBtn = document.getElementById('addVenueBtn');
+            if (addVenueBtn) {
+                addVenueBtn.addEventListener('click', function() {
+                    const name = prompt('请输入场地名称：');
+                    if (!name) return;
+                    const loc = prompt('请输入位置：', '某地');
+                    const price = prompt('请输入出租费用：', '¥0/天');
+                    const time = prompt('请输入可用时间：', '周一至周五');
+                    const facilities = prompt('请输入设施条件：', '');
+                    const tbody = document.getElementById('venuesTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${name}</td>
+                        <td contenteditable="true">${loc}</td>
+                        <td contenteditable="true">${price}</td>
+                        <td contenteditable="true">${time}</td>
+                        <td contenteditable="true">${facilities}</td>
+                        <td><button class="btn btn-danger btn-sm venue-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增酒店/租车
+            const addHotelBtn = document.getElementById('addHotelBtn');
+            if (addHotelBtn) {
+                addHotelBtn.addEventListener('click', function() {
+                    const name = prompt('请输入名称：');
+                    if (!name) return;
+                    const type = prompt('请输入类型（酒店/租车）：', '酒店');
+                    const price = prompt('请输入价格/标准：', '¥0');
+                    const remark = prompt('请输入备注：', '');
+                    const tbody = document.getElementById('hotelsTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${name}</td>
+                        <td contenteditable="true">${type}</td>
+                        <td contenteditable="true">${price}</td>
+                        <td contenteditable="true">${remark}</td>
+                        <td><button class="btn btn-danger btn-sm hotel-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增合同模板
+            const addContractBtn = document.getElementById('addContractBtn');
+            if (addContractBtn) {
+                addContractBtn.addEventListener('click', function() {
+                    const name = prompt('请输入模板名称：');
+                    if (!name) return;
+                    const type = prompt('请输入类型（合同/协议）：', '合同');
+                    const updated = prompt('请输入更新时间：', '2025-01-01');
+                    const tbody = document.getElementById('contractsTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${name}</td>
+                        <td contenteditable="true">${type}</td>
+                        <td contenteditable="true">${updated}</td>
+                        <td><button class="btn btn-danger btn-sm contract-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增保险
+            const addInsuranceBtn = document.getElementById('addInsuranceBtn');
+            if (addInsuranceBtn) {
+                addInsuranceBtn.addEventListener('click', function() {
+                    const type = prompt('请输入保险类别：');
+                    if (!type) return;
+                    const amount = prompt('请输入保险金额：', '¥0');
+                    const period = prompt('请输入保险期限：', '2025/01/01-2025/12/31');
+                    const coverage = prompt('请输入承保范围：', '');
+                    const tbody = document.getElementById('insuranceTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${type}</td>
+                        <td contenteditable="true">${amount}</td>
+                        <td contenteditable="true">${period}</td>
+                        <td contenteditable="true">${coverage}</td>
+                        <td><button class="btn btn-danger btn-sm insurance-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
+            // 新增预算项
+            const addBudgetItemBtn = document.getElementById('addBudgetItemBtn');
+            if (addBudgetItemBtn) {
+                addBudgetItemBtn.addEventListener('click', function() {
+                    const project = prompt('请输入项目名称：');
+                    if (!project) return;
+                    const budget = prompt('请输入预算金额：', '¥0');
+                    const actual = prompt('请输入实际支出：', '¥0');
+                    // 计算偏差
+                    let deviation = '';
+                    try {
+                        const bNum = parseFloat(budget.replace(/[^\d.-]/g, ''));
+                        const aNum = parseFloat(actual.replace(/[^\d.-]/g, ''));
+                        const diff = aNum - bNum;
+                        deviation = (diff >= 0 ? '+' : '-') + '¥' + Math.abs(diff).toLocaleString();
+                    } catch (ex) {
+                        deviation = '0';
+                    }
+                    const remark = prompt('请输入备注：', '');
+                    const tbody = document.getElementById('budgetTableBody');
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td contenteditable="true">${project}</td>
+                        <td contenteditable="true">${budget}</td>
+                        <td contenteditable="true">${actual}</td>
+                        <td contenteditable="true">${deviation}</td>
+                        <td contenteditable="true">${remark}</td>
+                        <td><button class="btn btn-danger btn-sm budget-delete">删除</button></td>`;
+                    tbody.appendChild(tr);
+                });
+            }
             // 初始化仪表板和初始图表
             initDashboard();
             renderDriverChart();
-            renderDriverChartLeo(); // 初始渲染，确保首次进入车手页也有图
         });
     </script>
 </body>
